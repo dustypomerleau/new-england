@@ -30,7 +30,7 @@
 				"variable.parameter"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -166,7 +166,7 @@
 				"variable.function"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -185,7 +185,7 @@
 				"string.other.link"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -206,7 +206,7 @@
 		{
 			"scope": "keyword.other.unit",
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -282,7 +282,7 @@
 				"entity.name.variable.field"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -291,7 +291,7 @@
 				"support.type"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -316,7 +316,7 @@
 				"variable.other.class.js"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -336,7 +336,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -346,7 +346,7 @@
 				"variable.function.constructor"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -366,7 +366,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -425,7 +425,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -528,7 +528,7 @@
 				"punctuation.definition.list_item.markdown"
 			],
 			"settings": {
-				"foreground": "#555e6a"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -843,7 +843,7 @@
 		"editor.findMatchHighlightBackground": "#afada5a0",
 		"editor.findRangeHighlightBackground": "#83b4d650",
 		"editor.focusedStackFrameHighlightBackground": "#83b4d650",
-		"editor.foreground": "#555e6a",
+		"editor.foreground": "#3e454e",
 		"editor.hoverHighlightBackground": "#83b4d670",
 		"editor.inactiveSelectionBackground": "#ccb88960",
 		"editor.lineHighlightBackground": "#fce9bc",
