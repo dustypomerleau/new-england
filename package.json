@@ -1,0 +1,21 @@
+{
+  "name": "new-england",
+  "displayName": "New England light theme",
+  "description": "A truly comfortable light theme for Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.36.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "New England light theme",
+        "uiTheme": "vs",
+        "path": "./themes/new-england.json"
+      }
+    ]
+  }
+}
