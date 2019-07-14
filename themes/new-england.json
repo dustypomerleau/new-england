@@ -48,7 +48,7 @@
 				"variable.other.object.property"
 			],
 			"settings": {
-				"foreground": "#5c4052"
+				"foreground": "#510051"
 			}
 		},
 		{
@@ -175,7 +175,7 @@
 				"meta.block variable.other"
 			],
 			"settings": {
-				"foreground": "#5c4052"
+				"foreground": "#510051"
 			}
 		},
 		{
@@ -229,7 +229,7 @@
 				"constant.other.symbol"
 			],
 			"settings": {
-				"foreground": "#5C4052"
+				"foreground": "#510051"
 			}
 		},
 		{
@@ -247,7 +247,7 @@
 				"entity.name"
 			],
 			"settings": {
-				"foreground": "#2c5451"
+				"foreground": "#2c5851"
 			}
 		},
 		{
@@ -780,7 +780,7 @@
 				"punctuation.section.regexp.end.elixir"
 			],
 			"settings": {
-				"foreground": "#5c4052"
+				"foreground": "#510051"
 			}
 		},
 		{
@@ -808,7 +808,7 @@
 				"variable.language.this.js"
 			],
 			"settings": {
-				"foreground": "#2c5451"
+				"foreground": "#2c5851"
 			}
 		}
 	],
@@ -917,7 +917,7 @@
 		"extensionButton.prominentHoverBackground": "#fbe1a3",
 		"focusBorder": "#afada5",
 		"foreground": "#3e454e",
-		"gitDecoration.addedResourceForeground": "#2c5451",
+		"gitDecoration.addedResourceForeground": "#2c5851",
 		"gitDecoration.conflictingResourceForeground": "#407875",
 		"gitDecoration.deletedResourceForeground": "#77463e",
 		"gitDecoration.ignoredResourceForeground": "#97907f",
@@ -1043,13 +1043,13 @@
 		"terminal.ansiBrightBlue": "#3a485b",
 		"terminal.ansiBrightCyan": "#407875",
 		"terminal.ansiBrightGreen": "#859900",
-		"terminal.ansiBrightMagenta": "#5c4052",
+		"terminal.ansiBrightMagenta": "#510051",
 		"terminal.ansiBrightRed": "#660000",
 		"terminal.ansiBrightWhite": "#645456",
 		"terminal.ansiBrightYellow": "#9a4e32",
-		"terminal.ansiCyan": "#2c5451",
+		"terminal.ansiCyan": "#2c5851",
 		"terminal.ansiGreen": "#5b5c31",
-		"terminal.ansiMagenta": "#5c4052",
+		"terminal.ansiMagenta": "#510051",
 		"terminal.ansiRed": "#9a4e32",
 		"terminal.ansiWhite": "#97907f",
 		"terminal.ansiYellow": "#660000",
