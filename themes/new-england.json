@@ -30,7 +30,7 @@
 				"variable.parameter"
 			],
 			"settings": {
-				"foreground": "#3a485b"
+				"foreground": "#587182"
 			}
 		},
 		{
@@ -154,7 +154,7 @@
 				"entity.name.function"
 			],
 			"settings": {
-				"foreground": "#3a485b"
+				"foreground": "#587182"
 			}
 		},
 		{
@@ -1040,7 +1040,7 @@
 		"terminal.ansiBlack": "#3e454e",
 		"terminal.ansiBlue": "#43596f",
 		"terminal.ansiBrightBlack": "#3a485b",
-		"terminal.ansiBrightBlue": "#3a485b",
+		"terminal.ansiBrightBlue": "#587182",
 		"terminal.ansiBrightCyan": "#407875",
 		"terminal.ansiBrightGreen": "#859900",
 		"terminal.ansiBrightMagenta": "#490049",
