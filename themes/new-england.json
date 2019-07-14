@@ -48,7 +48,7 @@
 				"variable.other.object.property"
 			],
 			"settings": {
-				"foreground": "#510051"
+				"foreground": "#3e454e"
 			}
 		},
 		{
@@ -175,7 +175,7 @@
 				"meta.block variable.other"
 			],
 			"settings": {
-				"foreground": "#510051"
+				"foreground": "#490049"
 			}
 		},
 		{
@@ -229,7 +229,7 @@
 				"constant.other.symbol"
 			],
 			"settings": {
-				"foreground": "#510051"
+				"foreground": "#490049"
 			}
 		},
 		{
@@ -780,7 +780,7 @@
 				"punctuation.section.regexp.end.elixir"
 			],
 			"settings": {
-				"foreground": "#510051"
+				"foreground": "#490049"
 			}
 		},
 		{
@@ -1043,13 +1043,13 @@
 		"terminal.ansiBrightBlue": "#3a485b",
 		"terminal.ansiBrightCyan": "#407875",
 		"terminal.ansiBrightGreen": "#859900",
-		"terminal.ansiBrightMagenta": "#510051",
+		"terminal.ansiBrightMagenta": "#490049",
 		"terminal.ansiBrightRed": "#660000",
 		"terminal.ansiBrightWhite": "#645456",
 		"terminal.ansiBrightYellow": "#9a4e32",
 		"terminal.ansiCyan": "#2c5851",
 		"terminal.ansiGreen": "#5b5c31",
-		"terminal.ansiMagenta": "#510051",
+		"terminal.ansiMagenta": "#490049",
 		"terminal.ansiRed": "#9a4e32",
 		"terminal.ansiWhite": "#97907f",
 		"terminal.ansiYellow": "#660000",
