@@ -125,7 +125,7 @@
 				"variable.interpolation"
 			],
 			"settings": {
-				"foreground": "#645456"
+				"foreground": "#585550"
 			}
 		},
 		{
@@ -546,7 +546,7 @@
 				"text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
 			],
 			"settings": {
-				"foreground": "#645456"
+				"foreground": "#585550"
 			}
 		},
 		{
@@ -666,7 +666,7 @@
 				"punctuation.definition.fenced.markdown"
 			],
 			"settings": {
-				"foreground": "#645456"
+				"foreground": "#585550"
 			}
 		},
 		{
@@ -789,7 +789,7 @@
 				"punctuation.section.function.elixir"
 			],
 			"settings": {
-				"foreground": "#645456"
+				"foreground": "#585550"
 			}
 		},
 		{
@@ -1045,7 +1045,7 @@
 		"terminal.ansiBrightGreen": "#859900",
 		"terminal.ansiBrightMagenta": "#490049",
 		"terminal.ansiBrightRed": "#660000",
-		"terminal.ansiBrightWhite": "#645456",
+		"terminal.ansiBrightWhite": "#585550",
 		"terminal.ansiBrightYellow": "#9a4e32",
 		"terminal.ansiCyan": "#2c5851",
 		"terminal.ansiGreen": "#5b5c31",
@@ -1062,7 +1062,7 @@
 		"textCodeBlock.background": "#f0e5c9",
 		"textLink.activeForeground": "#2aa198",
 		"textLink.foreground": "#268bd2",
-		"textPreformat.foreground": "#645456",
+		"textPreformat.foreground": "#585550",
 		"textSeparator.foreground": "#bd3073",
 		"titleBar.activeBackground": "#f0e5c9",
 		"titleBar.activeForeground": "#555e6a",
