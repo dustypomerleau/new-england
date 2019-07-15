@@ -162,7 +162,7 @@
         "entity.name.function"
       ],
       "settings": {
-        "foreground": "#587182"
+        "foreground": "#2c5851"
       }
     },
     {
@@ -246,7 +246,7 @@
         "entity.other.inherited-class"
       ],
       "settings": {
-        "foreground": "#4d6079"
+        "foreground": "#587182"
       }
     },
     {
@@ -255,7 +255,7 @@
         "entity.name"
       ],
       "settings": {
-        "foreground": "#2c5851"
+        "foreground": "#587182"
       }
     },
     {
