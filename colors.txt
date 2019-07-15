@@ -1,0 +1,89 @@
+Syntax highlighting colors
+
+  primary palette:
+    #fdf1d4 background
+    #3e454e default foreground text
+    #43596f
+    #660000
+    #9a4e32
+    #2c5851
+    #490049
+    #5b5c31
+    #585550 punctuation
+    #8D867B comments
+
+  secondary palette:
+    #407875 escapes
+    #587182
+    #93255b interpolation
+
+# --------------------------------------------------------------------------
+
+UI colors
+
+  #000000b3
+  #268bd2
+  #2aa198
+  #2c5851
+  #3a485b
+  #3e454e
+  #407875
+  #43596f
+  #490049
+  #555e6a
+  #555e6a50
+  #555e6a66
+  #585550
+  #587182
+  #5b5c31
+  #636a72
+  #660000
+  #66afe0
+  #77463e
+  #83b4d6
+  #83b4d64d
+  #83b4d650
+  #83b4d666
+  #83b4d670
+  #83b4d670
+  #83b4d680
+  #859900
+  #85990020
+  #85990040
+  #8599004d
+  #85990080
+  #97907f
+  #97907f
+  #9a4e32
+  #a3151520
+  #ad5838
+  #ad583890
+  #afada5
+  #afada5a0
+  #b1a894
+  #b1a89490
+  #b1a89490
+  #bd3073
+  #c0bbab
+  #c62d2a
+  #cac0a9
+  #ccb889
+  #ccb8894d
+  #ccb88960
+  #ccb99880
+  #d33682
+  #d6d0bf
+  #d6d0bf80
+  #dc322f
+  #dc322f50
+  #e3d8be
+  #e3d8bea6
+  #e3d8bedd
+  #f0e5c9
+  #f5eace
+  #fad98b
+  #fbe1a3
+  #fce9bc
+  #fdf1d4
+  #fdf6e3
+  #fdf6e5
