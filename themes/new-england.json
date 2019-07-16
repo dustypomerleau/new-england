@@ -49,7 +49,6 @@
       "scope": [
         "entity.name.variable.parameter",
         "entity.name",
-        "entity.other.inherited-class"
       ],
       "settings": {
         "foreground": "#587182"
@@ -291,6 +290,7 @@
         "entity.name.type.js",
         "variable.parameter.function-call.python",
         "meta.object-literal.key.js",
+        "entity.other.inherited-class"
       ],
       "settings": {
         "foreground": "#43596f"
