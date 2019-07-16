@@ -14,20 +14,42 @@
       }
     },
     {
-      "name": "Variables",
+      "name": "Variables, constants, tags",
       "scope": [
         "variable",
-        "entity.name.variable.local"
+        "entity.name.variable.local",
+        "variable.other.object",
+        "entity.name.type.class.ts",
+        "storage.type.class.jsdoc",
+        "constant.other.color",
+        "entity.name.tag",
+        "markup.deleted.git_gutter",
+        "meta.tag.sgml",
+        "constant.character",
+        "constant.escape",
+        "constant.language",
+        "constant.numeric",
+        "keyword.other.unit",
+        "keyword.other",
+        "support.constant",
+        "support.type",
+        "support.class",
+        "support.orther.namespace.use.php",
+        "meta.use.php",
+        "support.other.namespace.php",
+        "markup.changed.git_gutter",
+        "support.type.sys-types"
       ],
       "settings": {
         "foreground": "#660000"
       }
     },
     {
-      "name": "Variable Parameters",
+      "name": "Class, Variable Parameters",
       "scope": [
         "entity.name.variable.parameter",
-        "variable.parameter"
+        "entity.name",
+        "entity.other.inherited-class"
       ],
       "settings": {
         "foreground": "#587182"
@@ -43,44 +65,45 @@
       }
     },
     {
-      "name": "Properties",
+      "name": "Properties, variables, methods",
       "scope": [
-        "variable.other.object.property"
+        "variable.other.object.property",
+        "variable.other.readwrite.ts",
+        "variable.other.property.ts",
+        "variable.other.property.js.jsx",
+        "variable.other.property.js",
+        "variable.other.constant.ts",
+        "meta.jsx.children.js.jsx",
+        "variable.parameter.js.jsx",
+        "meta.object-literal.key.js.jsx",
+        "variable.other.readwrite.js.jsx",
+        "variable.other.readwrite.js",
+        "keyword.other.special-method",
+        "meta.function-call",
+        "support.function",
+        "variable.function",
+        "support.other.variable",
+        "string.other.link",
+        "keyword.other.unit",
+        "variable.parameter",
       ],
       "settings": {
         "foreground": "#3e454e"
       }
     },
     {
-      "name": "Colors",
-      "scope": [
-        "constant.other.color"
-      ],
-      "settings": {
-        "foreground": "#660000"
-      }
-    },
-    {
       "name": "Invalid",
       "scope": [
         "invalid",
-        "invalid.illegal"
+        "invalid.illegal",
+        "invalid.deprecated"
       ],
       "settings": {
         "foreground": "#dc322f"
       }
     },
     {
-      "name": "Invalid - Deprecated",
-      "scope": [
-        "invalid.deprecated"
-      ],
-      "settings": {
-        "foreground": "#d33682"
-      }
-    },
-    {
-      "name": "Keyword, Keyword Control, Storage, Types",
+      "name": "Keyword, control, storage",
       "scope": [
         "keyword.control.as",
         "keyword.control.flow",
@@ -99,17 +122,22 @@
         "keyword.other.var",
         "keyword.type",
         "keyword",
+        "punctuation.separator.key-value.html",
+        "punctuation.separator.key-value.ts",
         "storage.modifier",
         "storage.type.function",
         "storage.type.primitive",
-        "storage.type.ts"
+        "storage.type.ts",
+        "storage.type",
+        "storage.modifier.package",
+        "storage.modifier.import"
       ],
       "settings": {
         "foreground": "#9a4e32"
       }
     },
     {
-      "name": "Operator, Misc",
+      "name": "Punctuation",
       "scope": [
         "constant.other.color",
         "keyword.other.substitution",
@@ -130,15 +158,9 @@
     {
       "name": "Interpolations",
       "scope": [
-        "variable.interpolation"
-      ],
-      "settings": {
-        "foreground": "#93255b"
-      }
-    },
-    {
-      "name": "Embedded",
-      "scope": [
+        "variable.interpolation",
+        "punctuation.definition.template-expression.begin.ts",
+        "punctuation.definition.template-expression.end.ts",
         "punctuation.section.embedded"
       ],
       "settings": {
@@ -146,75 +168,29 @@
       }
     },
     {
-      "name": "Tag",
-      "scope": [
-        "entity.name.tag",
-        "markup.deleted.git_gutter",
-        "meta.tag.sgml"
-      ],
-      "settings": {
-        "foreground": "#660000"
-      }
-    },
-    {
       "name": "Function",
       "scope": [
-        "entity.name.function"
+        "entity.name.function",
+        "support.function.magic.python"
       ],
       "settings": {
         "foreground": "#2c5851"
       }
     },
     {
-      "name": "Function, Special Method",
+      "name": "Block Level Variables",
       "scope": [
-        "keyword.other.special-method",
-        "meta.function-call",
-        "support.function",
-        "variable.function"
-      ],
-      "settings": {
-        "foreground": "#3e454e"
-      }
-    },
-    {
-      "name": "Block Level Variables", // primarily JS
-      "scope": [
-        "meta.block variable.other"
+        "meta.block variable.other",
+        "variable.object.property.ts",
+        "meta.object-literal.key.js.jsx",
+        "variable.parameter.ts",
+        "variable.parameter.js",
+        "variable.parameter.function.language.python",
+        "variable.parameter.function.language.special.self.python",
+        "constant.other.symbol" // atoms
       ],
       "settings": {
         "foreground": "#490049"
-      }
-    },
-    {
-      "name": "Other Variable, String Link",
-      "scope": [
-        "support.other.variable",
-        "string.other.link"
-      ],
-      "settings": {
-        "foreground": "#3e454e"
-      }
-    },
-    {
-      "name": "Number, Constant",
-      "scope": [
-        "constant.character",
-        "constant.escape",
-        "constant.language",
-        "constant.numeric",
-        "keyword.other.unit",
-        "keyword.other",
-        "support.constant"
-      ],
-      "settings": {
-        "foreground": "#660000"
-      }
-    },
-    {
-      "scope": "keyword.other.unit",
-      "settings": {
-        "foreground": "#3e454e"
       }
     },
     {
@@ -223,7 +199,8 @@
         "constant.other.key",
         "markup.heading",
         "markup.inserted.git_gutter",
-        "meta.group.braces.curly", "constant.other.object.key.js",
+        "meta.group.braces.curly",
+        "constant.other.object.key.js",
         "string.unquoted.label.js",
         "string"
       ],
@@ -231,59 +208,7 @@
         "foreground": "#5b5c31"
       }
     },
-    {
-      "name": "Atoms", // mainly for Elixir
-      "scope": [
-        "constant.other.symbol"
-      ],
-      "settings": {
-        "foreground": "#490049"
-      }
-    },
-    {
-      "name": "Inherited Class",
-      "scope": [
-        "entity.other.inherited-class"
-      ],
-      "settings": {
-        "foreground": "#587182"
-      }
-    },
-    {
-      "name": "Class",
-      "scope": [
-        "entity.name"
-      ],
-      "settings": {
-        "foreground": "#587182"
-      }
-    },
-    {
-      "name": "Support",
-      "scope": [
-        "support.type",
-        "support.class",
-        "support.orther.namespace.use.php",
-        "meta.use.php",
-        "support.other.namespace.php",
-        "markup.changed.git_gutter",
-        "support.type.sys-types"
-      ],
-      "settings": {
-        "foreground": "#660000"
-      }
-    },
-    {
-      "name": "Storage Type, Import Class",
-      "scope": [
-        "storage.type",
-        "storage.modifier.package",
-        "storage.modifier.import"
-      ],
-      "settings": {
-        "foreground": "#9a4e32"
-      }
-    },
+    // clean from here
     {
       "name": "Fields",
       "scope": [
@@ -360,7 +285,12 @@
     {
       "name": "Attributes",
       "scope": [
-        "entity.other.attribute-name"
+        "entity.other.attribute-name",
+        "entity.name.type.interface.ts",
+        "entity.name.type.ts",
+        "entity.name.type.js",
+        "variable.parameter.function-call.python",
+        "meta.object-literal.key.js",
       ],
       "settings": {
         "foreground": "#43596f"
@@ -369,7 +299,6 @@
     {
       "name": "HTML Attributes",
       "scope": [
-        "text.html.basic entity.other.attribute-name.html",
         "text.html.basic entity.other.attribute-name"
       ],
       "settings": {
@@ -407,7 +336,8 @@
     {
       "name": "Escape Characters",
       "scope": [
-        "constant.character.escape"
+        "constant.character.escape",
+        "constant.character.numeric.regexp"
       ],
       "settings": {
         "foreground": "#407875"
@@ -813,7 +743,7 @@
     {
       "name": "JS this",
       "scope": [
-        "variable.language.this.js"
+        "variable.language.this"
       ],
       "settings": {
         "foreground": "#2c5851"

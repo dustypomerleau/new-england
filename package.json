@@ -12,7 +12,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "New England light theme",
+        "label": "New England",
         "uiTheme": "vs",
         "path": "./themes/new-england.json"
       }
