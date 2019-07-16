@@ -85,5 +85,4 @@ UI colors
   #fbe1a3
   #fce9bc
   #fdf1d4
-  #fdf6e3
   #fdf6e5
