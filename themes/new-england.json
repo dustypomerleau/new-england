@@ -180,6 +180,7 @@
     {
       "name": "Interpolations",
       "scope": [
+        "constant.character.format.placeholder.other.python",
         "punctuation.definition.template-expression.begin.ts",
         "punctuation.definition.template-expression.end.ts",
         "punctuation.section.embedded",
@@ -196,6 +197,7 @@
       "scope": [
         "entity.name.function",
         "markup.quote.markdown",
+        "storage.type.format.python",
         "support.function.magic.python"
       ],
       "settings": {
