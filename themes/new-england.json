@@ -141,6 +141,7 @@
         "punctuation.definition.quote.begin.markdown",
         "punctuation.definition.raw.markdown",
         "punctuation.separator.dictionary.key-value.json",
+        "punctuation.separator.key-value.css",
         "punctuation.separator.key-value.html",
         "punctuation.separator.key-value.markdown",
         "punctuation.separator.key-value.ts",
