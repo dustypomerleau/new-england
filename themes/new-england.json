@@ -41,8 +41,8 @@
         "support.type.sys-types",
         "support.type",
         "variable.language",
-        "variable.other.object",
-        "variable"
+        "variable",
+        "text.html.markdown markup.inline.raw.markdown",
       ],
       "settings": {
         "foreground": "#660000"
@@ -90,6 +90,7 @@
         "variable.import.parameter.js",
         "variable.other.class.js",
         "variable.other.constant.ts",
+        "variable.other.object",
         "variable.other.object.property",
         "variable.other.property.js.jsx",
         "variable.other.property.js",
@@ -119,23 +120,6 @@
       "name": "Keyword, control, storage",
       "scope": [
         "entity.other.attribute-name.class",
-        "keyword.control.as",
-        "keyword.control.flow",
-        "keyword.control.from",
-        "keyword.control.import",
-        "keyword.control",
-        "keyword.other.await",
-        "keyword.other.class",
-        "keyword.other.event",
-        "keyword.other.import",
-        "keyword.other.namespace",
-        "keyword.other.new",
-        "keyword.other.package",
-        "keyword.other.this",
-        "keyword.other.using",
-        "keyword.other.var",
-        "keyword.other",
-        "keyword.type",
         "keyword",
         "markdown.heading",
         "markup.heading | markup.heading entity.name",
@@ -143,15 +127,13 @@
         "markup.heading.setext",
         "meta.separator",
         "meta.structure.tuple.erlang",
+        "punctuation.definition.constant.ruby",
         "punctuation.definition.list.begin.markdown",
         "punctuation.definition.quote.begin.markdown",
         "punctuation.definition.raw.markdown",
         "punctuation.separator.clause-head-body.erlang",
         "punctuation.separator.dictionary.key-value.json",
-        "punctuation.separator.key-value.css",
-        "punctuation.separator.key-value.html",
-        "punctuation.separator.key-value.markdown",
-        "punctuation.separator.key-value.ts",
+        "punctuation.separator.key-value",
         "source.sass keyword.control",
         "storage.modifier.import",
         "storage.modifier.package",
@@ -160,7 +142,8 @@
         "storage.type.primitive",
         "storage.type.ts",
         "storage.type",
-        "string.regexp"
+        "string.regexp",
+        "markup.quote punctuation.definition.blockquote.markdown",
       ],
       "settings": {
         "foreground": "#9a4e32"
@@ -204,7 +187,6 @@
       "name": "Function",
       "scope": [
         "entity.name.function",
-        "markup.quote.markdown",
         "storage.type.format.python",
         "support.function.magic.python"
       ],
@@ -225,7 +207,8 @@
         "variable.parameter.function.language.python",
         "variable.parameter.function.language.special.self.python",
         "variable.parameter.js",
-        "variable.parameter.ts"
+        "variable.parameter.ts",
+        "storage.type.java",
       ],
       "settings": {
         "foreground": "#490049"
@@ -263,7 +246,10 @@
         "source.sass support.type.property-name",
         "source.scss support.type.property-name",
         "source.stylus support.type.property-name",
-        "variable.parameter.function-call.python"
+        "variable.parameter.function-call.python",
+        "storage.modifier.import.java",
+        "string.other.link.description.title.markdown",
+        "variable.other.readwrite.module.elixir",
       ],
       "settings": {
         "foreground": "#43596f"
@@ -323,26 +309,6 @@
         "foreground": "#9a4e32"
       }
     },
-    // Markup/Markdown TODO: clean all of this
-    {
-      "name": "Markdown - Plain",
-      "scope": [
-        "text.html.markdown",
-        "punctuation.definition.list_item.markdown"
-      ],
-      "settings": {
-        "foreground": "#3e454e"
-      }
-    },
-    {
-      "name": "Markdown - Markup Raw Inline",
-      "scope": [
-        "text.html.markdown markup.inline.raw.markdown"
-      ],
-      "settings": {
-        "foreground": "#660000"
-      }
-    },
     {
       "name": "Markup - Italic",
       "scope": [
@@ -357,7 +323,13 @@
       "name": "Markup - Bold",
       "scope": [
         "markup.bold",
-        "markup.bold string"
+        "markup.bold string",
+        "markup.bold markup.italic",
+        "markup.italic markup.bold",
+        "markup.quote markup.bold",
+        "markup.bold markup.italic string",
+        "markup.italic markup.bold string",
+        "markup.quote markup.bold string"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -375,21 +347,6 @@
       }
     },
     {
-      "name": "Markup - Bold-Italic",
-      "scope": [
-        "markup.bold markup.italic",
-        "markup.italic markup.bold",
-        "markup.quote markup.bold",
-        "markup.bold markup.italic string",
-        "markup.italic markup.bold string",
-        "markup.quote markup.bold string"
-      ],
-      "settings": {
-        "fontStyle": "bold",
-        "foreground": "#9a4e32"
-      }
-    },
-    {
       "name": "Markup - Underline",
       "scope": [
         "markup.underline"
@@ -400,24 +357,16 @@
       }
     },
     {
-      "name": "Markdown - Blockquote",
+      "name": "Function",
       "scope": [
-        "markup.quote punctuation.definition.blockquote.markdown"
+        "markup.quote.markdown"
       ],
       "settings": {
-        "foreground": "#9a4e32"
+        "fontStyle": "italic",
+        "foreground": "#2c5851"
       }
     },
-    {
-      "name": "Markdown - Link Description",
-      "scope": [
-        "string.other.link.description.title.markdown"
-      ],
-      "settings": {
-        "foreground": "#5b5c31"
-      }
-    },
-    {
+    { // from here
       "name": "Markup - Raw Block",
       "scope": [
         "markup.raw.block"
