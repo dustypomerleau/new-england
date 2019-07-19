@@ -24,8 +24,8 @@
         "entity.name.tag",
         "entity.name.type.class.ts",
         "entity.name.variable.local",
+        "entity.name.function",
         "keyword.other.unit",
-        "keyword.other",
         "markup.changed.git_gutter",
         "markup.deleted.git_gutter",
         "markup.inline.raw.string.markdown",
@@ -33,6 +33,7 @@
         "meta.tag.sgml",
         "meta.use.php",
         "storage.type.class.jsdoc",
+        "storage.type.elm",
         "support.class",
         "support.constant",
         "support.orther.namespace.use.php",
@@ -51,7 +52,9 @@
       "name": "Class, Variable Parameters",
       "scope": [
         "entity.name.variable.parameter",
-        "entity.name"
+        "entity.name",
+        "entity.name.type.module",
+        "entity.name.type.class"
       ],
       "settings": {
         "foreground": "#587182"
@@ -70,6 +73,7 @@
       "name": "Properties, variables, methods",
       "scope": [
         "entity.name.module.js",
+        "entity.name.record.field.accessor.elm",
         "entity.name.variable.field",
         "keyword.other.special-method",
         "keyword.other.unit",
@@ -130,16 +134,19 @@
         "keyword.other.this",
         "keyword.other.using",
         "keyword.other.var",
+        "keyword.other",
         "keyword.type",
         "keyword",
-        "markup.heading.setext",
         "markdown.heading",
         "markup.heading | markup.heading entity.name",
         "markup.heading.markdown punctuation.definition.heading.markdown",
+        "markup.heading.setext",
         "meta.separator",
+        "meta.structure.tuple.erlang",
         "punctuation.definition.list.begin.markdown",
         "punctuation.definition.quote.begin.markdown",
         "punctuation.definition.raw.markdown",
+        "punctuation.separator.clause-head-body.erlang",
         "punctuation.separator.dictionary.key-value.json",
         "punctuation.separator.key-value.css",
         "punctuation.separator.key-value.html",
@@ -210,6 +217,7 @@
       "scope": [
         "constant.other.reference.link.markdown",
         "constant.other.symbol", // atoms
+        "entity.name.record.field.elm",
         "markup.list",
         "meta.block variable.other",
         "meta.object-literal.key.js.jsx",
@@ -241,12 +249,21 @@
     {
       "name": "CSS Class and Support",
       "scope": [
+        "constant.type-constructor.elm",
+        "entity.name.type.interface.ts",
+        "entity.name.type.js",
+        "entity.name.type.ts",
+        "entity.other.attribute-name",
+        "entity.other.inherited-class",
+        "meta.object-literal.key.js",
         "source.css support.type.property-name",
+        "source.json meta.structure.dictionary.json support.type.property-name.json",
         "source.less support.type.property-name",
         "source.postcss support.type.property-name",
         "source.sass support.type.property-name",
         "source.scss support.type.property-name",
-        "source.stylus support.type.property-name"
+        "source.stylus support.type.property-name",
+        "variable.parameter.function-call.python"
       ],
       "settings": {
         "foreground": "#43596f"
@@ -263,23 +280,10 @@
       }
     },
     {
-      "name": "Attributes",
-      "scope": [
-        "entity.name.type.interface.ts",
-        "entity.name.type.js",
-        "entity.name.type.ts",
-        "entity.other.attribute-name",
-        "entity.other.inherited-class",
-        "meta.object-literal.key.js",
-        "variable.parameter.function-call.python"
-      ],
-      "settings": {
-        "foreground": "#43596f"
-      }
-    },
-    {
       "name": "HTML Attributes",
       "scope": [
+        "tag.decorator.js entity.name.tag.js",
+        "tag.decorator.js punctuation.definition.tag.js",
         "text.html.basic entity.other.attribute-name"
       ],
       "settings": {
@@ -308,18 +312,6 @@
         "fontStyle": "underline"
       }
     },
-    // JS
-    {
-      "name": "Decorators",
-      "scope": [
-        "tag.decorator.js entity.name.tag.js",
-        "tag.decorator.js punctuation.definition.tag.js"
-      ],
-      "settings": {
-        "fontStyle": "italic",
-        "foreground": "#3e454e"
-      }
-    },
     {
       "name": "ES7 Bind Operator",
       "scope": [
@@ -329,16 +321,6 @@
       "settings": {
         "fontStyle": "italic",
         "foreground": "#9a4e32"
-      }
-    },
-    // JSON
-    {
-      "name": "JSON Key - Level 0",
-      "scope": [
-        "source.json meta.structure.dictionary.json support.type.property-name.json"
-      ],
-      "settings": {
-        "foreground": "#43596f"
       }
     },
     // Markup/Markdown TODO: clean all of this
@@ -547,7 +529,6 @@
       "scope": [
         "keyword.other.special-method.elixir",
         "punctuation.definition.constant.elixir",
-        "variable.other.anonymous.elixir"
 
       ],
       "settings": {
