@@ -14,7 +14,7 @@
       }
     },
     {
-      "name": "constants, variables, tags",
+      "name": "red: constants, variables, tags",
       "scope": [
         "constant.character",
         "constant.escape",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "name": "classes, object literal keys",
+      "name": "slate: classes, object literal keys",
       "scope": [
         "entity.name.type.class",
         "entity.name.type.module",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "name": "properties, variables, methods",
+      "name": "navy: properties, variables, methods",
       "scope": [
         "entity.name.module.js",
         "entity.name.record.field.accessor.elm",
@@ -113,7 +113,7 @@
       }
     },
     {
-      "name": "keyword, control, storage",
+      "name": "orange: keyword, control, storage",
       "scope": [
         "entity.other.attribute-name.class",
         "keyword.control.newline.tex",
@@ -154,7 +154,7 @@
       }
     },
     {
-      "name": "punctuation",
+      "name": "brown: punctuation",
       "scope": [
         "constant.other.color",
         "keyword.other.substitution",
@@ -176,7 +176,7 @@
       }
     },
     {
-      "name": "interpolations, regular expressions",
+      "name": "pink: interpolations, regular expressions",
       "scope": [
         "constant.character.format.placeholder.other.python",
         "constant.numeric.math.tex",
@@ -198,7 +198,7 @@
       }
     },
     {
-      "name": "functions, this",
+      "name": "sea green: functions, this",
       "scope": [
         "entity.name.function",
         "entity.name.section.latex",
@@ -214,7 +214,7 @@
       }
     },
     {
-      "name": "atoms, function params, list items, types",
+      "name": "purple: atoms, function params, list items, types",
       "scope": [
         "constant.other.reference.label.latex",
         "constant.other.reference.link.markdown",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "name": "strings",
+      "name": "forest green: strings",
       "scope": [
         "constant.other.key",
         "constant.other.object.key.js",
@@ -259,7 +259,7 @@
       }
     },
     {
-      "name": "keys, objects, module attributes",
+      "name": "blue: keys, objects, module attributes",
       "scope": [
         "constant.other.general.math.tex",
         "entity.name.record.field.elm",
@@ -288,6 +288,18 @@
       }
     },
     {
+      "name": "teal: escapes, placeholders",
+      "scope": [
+        "constant.character.escape",
+        "constant.character.numeric.regexp",
+        "string constant.other.placeholder",
+        "constant.character",
+      ],
+      "settings": {
+        "foreground": "#407875"
+      }
+    },
+    {
       "name": "JS method names",
       "scope": [
         "entity.name.method.js"
@@ -305,18 +317,6 @@
       "settings": {
         "fontStyle": "italic",
         "foreground": "#3e454e"
-      }
-    },
-    {
-      "name": "escapes, placeholders",
-      "scope": [
-        "constant.character.escape",
-        "constant.character.numeric.regexp",
-        "string constant.other.placeholder",
-        "constant.character",
-      ],
-      "settings": {
-        "foreground": "#407875"
       }
     },
     {
