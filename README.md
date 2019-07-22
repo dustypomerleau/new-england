@@ -1,13 +1,32 @@
-# README
-## This is the README for your extension "new-england"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# New England
+## A truly comfortable light theme for Visual Studio Code
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+Designed from the ground up as a light theme, New England has a comfortable and legible contrast that will handle long hours at the screen, variable display brightness, and late-night redshifting by f.lux or Night Shift. Thanks for coming to visit. We hope you like it here, and we hope you stay.
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+PRs for language-specific highlighting improvements are welcome. Scopes can be viewed by opening the command palette and selecting `Developer: Inspect TM Scopes`. Theme colors are listed in [`colors.txt`](./colors.txt).
 
-**Enjoy!**
+## Screenshots:
+
+### Typescript
+
+![typescript](./images/typescript.png)
+
+### React
+
+![react](./images/react.png)
+
+### HTML
+
+![html](./images/html.png)
+
+### CSS
+
+![css](./images/css.png)
+
+### Elixir
+
+![elixir](./images/elixir.png)
+
+### Python
+
+![python](./images/python.png)

@@ -1,11 +1,33 @@
 {
   "name": "new-england",
-  "displayName": "New England light theme",
+  "displayName": "New England",
+  "version": "0.1.0",
+  "publisher": "dustypomerleau",
   "description": "A truly comfortable light theme for Visual Studio Code",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.36.0"
+  "homepage": "https://github.com/dustypomerleau/new-england",
+  "author": {
+    "name": "dustypomerleau (https://github.com/dustypomerleau)"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustypomerleau/new-england"
+  },
+  "bugs": {
+    "url": "https://github.com/dustypomerleau/new-england/issues"
+  },
+  "license": "Please see LICENSE.md",
+  "galleryBanner": {
+    "color": "#fdf1d4",
+    "theme": "light"
+  },
+  "icon": "./images/icon.png",
+  "keywords": [
+    "light",
+    "theme",
+    "warm",
+    "new",
+    "england"
+  ],
   "categories": [
     "Themes"
   ],
@@ -17,5 +39,11 @@
         "path": "./themes/new-england.json"
       }
     ]
+  },
+  "engines": {
+    "vscode": "^1.36.0"
+  },
+  "devDependencies": {
+    "vscode": "^1.36.0"
   }
 }
