@@ -204,7 +204,7 @@
       }
     },
     {
-      "name": "sea green: functions, this",
+      "name": "sea green: functions",
       "scope": [
         "entity.name.function",
         "entity.name.section.latex",
