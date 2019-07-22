@@ -46,7 +46,8 @@
         "support.type",
         "text.html.markdown markup.inline.raw.markdown",
         "variable.language",
-        "variable.other.constant"
+        "variable.other.constant",
+        "markup.fenced_code.block.markdown",
       ],
       "settings": {
         "foreground": "#660000"
@@ -159,7 +160,6 @@
         "constant.other.color",
         "keyword.other.substitution",
         "keyword.other.template",
-        "markup.fenced_code.block.markdown",
         "meta.tag",
         "punctuation.definition.fenced.markdown",
         "punctuation.definition.tag.begin.html",
@@ -220,7 +220,7 @@
         "constant.other.reference.link.markdown",
         "constant.other.symbol", // atoms
         "constant.other",
-        "markup.list",
+        "markup.list meta.paragraph.markdown",
         "meta.block variable.other",
         "meta.block",
         "punctuation.section.list.begin.elixir",
@@ -391,7 +391,7 @@
     {
       "name": "markup block quote",
       "scope": [
-        "markup.quote.markdown"
+        "markup.quote meta.paragraph.markdown"
       ],
       "settings": {
         "fontStyle": "italic",
