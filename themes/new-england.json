@@ -96,7 +96,12 @@
         "variable.other.property.ts",
         "variable.other.readwrite.js.jsx",
         "variable.other.readwrite.ts",
-        "variable.parameter"
+        "variable.parameter",
+        "string.regexp keyword",
+        "string.regexp punctuation",
+        "string.regexp meta punctuation",
+        "string.regexp meta punctuation meta.assertion",
+
       ],
       "settings": {
         "foreground": "#3e454e"
@@ -148,7 +153,7 @@
         "support.function.section.latex",
         "support.function.textbf.latex",
         "support.function.textit.latex",
-        "support.function.url.latex"
+        "support.function.url.latex",
       ],
       "settings": {
         "foreground": "#9a4e32"
@@ -160,6 +165,7 @@
         "constant.other.color",
         "keyword.other.substitution",
         "keyword.other.template",
+        // "meta.assertion",
         "meta.tag",
         "punctuation.definition.fenced.markdown",
         "punctuation.definition.tag.begin.html",
@@ -169,7 +175,7 @@
         "punctuation.section.class.end",
         "punctuation.section.function.elixir",
         "punctuation.separator.inheritance.php",
-        "punctuation"
+        "punctuation",
       ],
       "settings": {
         "foreground": "#585550"
@@ -188,10 +194,13 @@
         "string.other.link.description.markdown",
         "string.other.link.title.markdown",
         "string.regexp",
+        "string.regexp meta.group",
+        "string.regexp constant.other",
         "support.class.latex",
         "support.class.math.latex",
         "support.module.elm",
-        "variable.interpolation"
+        "variable.interpolation",
+        "variable.language.this",
       ],
       "settings": {
         "foreground": "#93255b"
@@ -207,7 +216,6 @@
         "meta.function.embedded.latex",
         "storage.type.format.python",
         "support.function.magic.python",
-        "variable.language.this"
       ],
       "settings": {
         "foreground": "#2c5851"
@@ -281,7 +289,7 @@
         "variable.other.object",
         "variable.other.readwrite.module.elixir",
         "variable.other.readwrite",
-        "variable.parameter.function-call.python"
+        "variable.parameter.function-call.python",
       ],
       "settings": {
         "foreground": "#43596f"
@@ -294,6 +302,7 @@
         "constant.character.numeric.regexp",
         "string constant.other.placeholder",
         "constant.character",
+        "constant.other.character-class.regexp",
       ],
       "settings": {
         "foreground": "#407875"
