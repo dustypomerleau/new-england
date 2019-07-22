@@ -31,6 +31,7 @@
         "keyword.other.unit",
         "markup.changed.git_gutter",
         "markup.deleted.git_gutter",
+        "markup.fenced_code.block.markdown",
         "markup.inline.raw.string.markdown",
         "markup.raw.block.fenced.markdown",
         "markup.raw.block",
@@ -46,8 +47,7 @@
         "support.type",
         "text.html.markdown markup.inline.raw.markdown",
         "variable.language",
-        "variable.other.constant",
-        "markup.fenced_code.block.markdown",
+        "variable.other.constant"
       ],
       "settings": {
         "foreground": "#660000"
@@ -62,7 +62,7 @@
         "entity.name",
         "entity",
         "keyword.control.preamble.latex",
-        "variable.language.elixir", // language variables (__MODULE__)
+        "variable.language.elixir",
         "variable.other.class"
       ],
       "settings": {
@@ -82,6 +82,10 @@
         "meta.jsx.children.js.jsx",
         "meta",
         "string.other.link",
+        "string.regexp keyword",
+        "string.regexp meta punctuation meta.assertion",
+        "string.regexp meta punctuation",
+        "string.regexp punctuation",
         "support.function",
         "support.other.variable",
         "support.type",
@@ -96,12 +100,7 @@
         "variable.other.property.ts",
         "variable.other.readwrite.js.jsx",
         "variable.other.readwrite.ts",
-        "variable.parameter",
-        "string.regexp keyword",
-        "string.regexp punctuation",
-        "string.regexp meta punctuation",
-        "string.regexp meta punctuation meta.assertion",
-
+        "variable.parameter"
       ],
       "settings": {
         "foreground": "#3e454e"
@@ -153,7 +152,7 @@
         "support.function.section.latex",
         "support.function.textbf.latex",
         "support.function.textit.latex",
-        "support.function.url.latex",
+        "support.function.url.latex"
       ],
       "settings": {
         "foreground": "#9a4e32"
@@ -165,7 +164,6 @@
         "constant.other.color",
         "keyword.other.substitution",
         "keyword.other.template",
-        // "meta.assertion",
         "meta.tag",
         "punctuation.definition.fenced.markdown",
         "punctuation.definition.tag.begin.html",
@@ -175,7 +173,7 @@
         "punctuation.section.class.end",
         "punctuation.section.function.elixir",
         "punctuation.separator.inheritance.php",
-        "punctuation",
+        "punctuation"
       ],
       "settings": {
         "foreground": "#585550"
@@ -199,8 +197,7 @@
         "support.class.latex",
         "support.class.math.latex",
         "support.module.elm",
-        "variable.interpolation",
-        "variable.language.this",
+        "variable.interpolation"
       ],
       "settings": {
         "foreground": "#93255b"
@@ -215,7 +212,7 @@
         "keyword.control.ref.latex",
         "meta.function.embedded.latex",
         "storage.type.format.python",
-        "support.function.magic.python",
+        "support.function.magic.python"
       ],
       "settings": {
         "foreground": "#2c5851"
@@ -289,7 +286,7 @@
         "variable.other.object",
         "variable.other.readwrite.module.elixir",
         "variable.other.readwrite",
-        "variable.parameter.function-call.python",
+        "variable.parameter.function-call.python"
       ],
       "settings": {
         "foreground": "#43596f"
@@ -300,9 +297,9 @@
       "scope": [
         "constant.character.escape",
         "constant.character.numeric.regexp",
-        "string constant.other.placeholder",
         "constant.character",
         "constant.other.character-class.regexp",
+        "string constant.other.placeholder"
       ],
       "settings": {
         "foreground": "#407875"
@@ -316,6 +313,16 @@
       "settings": {
         "fontStyle": "italic",
         "foreground": "#3e454e"
+      }
+    },
+    {
+      "name": "this",
+      "scope": [
+        "variable.language.this"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#93255b"
       }
     },
     {
