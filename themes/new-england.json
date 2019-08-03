@@ -16,8 +16,7 @@
     {
       "name": "yellow",
       "scope": [
-        "variable.other.object",
-        "variable.other.readwrite", // started as elixir module attributes but try to get away with generalizing - very heavy in js(x)/ts(x) so this may be too much - perhaps ok if you make objects red again or some other variation 
+        "variable.other.readwrite", // start with your booleans and numbers - then you can rehash this if you want-----also tried purple, but this is probably not going to work because there is too much purp in js/x - started as elixir module attributes but try to get away with generalizing - very heavy in js(x)/ts(x) so this may be too much - perhaps ok if you make objects red again or some other variation - consider changing boolean or number color so they aren't the same 
       ],
       "settings": {
         "foreground": "#664400"
@@ -57,6 +56,7 @@
         "text.html.markdown markup.inline.raw.markdown",
     //     "variable.language",
         "variable.other.constant", // heavy in js/ts - may need to uncomment that in navy
+        "variable.other.object",
       ],
       "settings": {
         "foreground": "#660000"
@@ -247,6 +247,7 @@
         // "storage.type.elm",
         // "variable.object.property.ts",
         // "variable.other.readwrite.js",
+        // "variable.other.readwrite", // check dupes
         // "variable.other",
         // "variable.parameter.function.language.python",
         // "variable.parameter.function.language.special.self.python",
