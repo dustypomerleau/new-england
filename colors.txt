@@ -8,8 +8,6 @@ Syntax highlighting colors
     #664400
     #9a4e32
     #2c5851
-    #605a71 // poor contrast
-    #604a51
     #490049
     #5b5c31
     #585550 punctuation
