@@ -5,8 +5,11 @@ Syntax highlighting colors
     #3e454e default foreground text
     #43596f
     #660000
+    #664400
     #9a4e32
     #2c5851
+    #605a71 // poor contrast
+    #604a51
     #490049
     #5b5c31
     #585550 punctuation

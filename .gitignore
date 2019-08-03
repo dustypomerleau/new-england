@@ -1,2 +1,4 @@
+images/
+.DS_Store
 *.code-workspace
 vsc-extension-quickstart.md

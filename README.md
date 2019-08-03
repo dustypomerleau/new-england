@@ -15,6 +15,10 @@ PRs for language-specific highlighting improvements are welcome. Scopes can be v
 
 ![react](./images/react.png)
 
+### Elm
+
+![elm](./images.elm.png)
+
 ### HTML
 
 ![html](./images/html.png)
