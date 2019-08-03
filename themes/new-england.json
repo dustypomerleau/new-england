@@ -3,39 +3,39 @@
   "type": "light",
   "tokenColors": [
     // probably go with blue for func calls throughout, red for objects and such with methods getting called, yellow for function params may not be universal, but it could look good if you let all variables be purple to compensate (not in elixir because the atoms are purple) - nope it doesn't look good lol
-    {
-      "name": "test",
-      "scope": [
-        // "entity.name.type.class.ts",
-        "meta.function-call.ts entity.name.function.ts"
-      ],
-      "settings": {
-        // "foreground": "#664400" // function invocation
-        "foreground": "#43596f" // function invocation
-      } 
-    },
-    {
-      "name": "test3",
-      "scope": [
-        // "entity.name.type.class.ts",
-        "parameter.variable.function.elixir",
-        "entity.name.type.ts",
-        // "meta.function-call.ts entity.name.function.ts"
-      ],
-      "settings": {
-        "foreground": "#664400" // function invocation
-        // "foreground": "#43596f" // function invocation
-      } 
-    },
-    {
-      "name": "test2",
-      "scope": [
-        "meta.definition.function.ts entity.name.function.ts"
-      ],
-      "settings": {
-        "foreground": "#2c5851" // function definition
-      } 
-    },
+    // {
+    //   "name": "test",
+    //   "scope": [
+    //     // "entity.name.type.class.ts",
+    //     "meta.function-call.ts entity.name.function.ts"
+    //   ],
+    //   "settings": {
+    //     // "foreground": "#664400" // function invocation
+    //     "foreground": "#43596f" // function invocation
+    //   } 
+    // },
+    // {
+    //   "name": "test3",
+    //   "scope": [
+    //     // "entity.name.type.class.ts",
+    //     "parameter.variable.function.elixir",
+    //     "entity.name.type.ts",
+    //     // "meta.function-call.ts entity.name.function.ts"
+    //   ],
+    //   "settings": {
+    //     "foreground": "#664400" // function invocation
+    //     // "foreground": "#43596f" // function invocation
+    //   } 
+    // },
+    // {
+    //   "name": "test2",
+    //   "scope": [
+    //     "meta.definition.function.ts entity.name.function.ts"
+    //   ],
+    //   "settings": {
+    //     "foreground": "#2c5851" // function definition
+    //   } 
+    // },
     {
       "name": "comments",
       "scope": [
@@ -48,95 +48,103 @@
       }
     },
     {
+      "name": "yellow",
+      "scope": [
+        "variable.other.object",
+      ],
+      "settings": {
+        "foreground": "#664400"
+      }
+    },
+    {
       "name": "red: constants, variables, tags",
       "scope": [
-        "constant.character",
-        "constant.escape",
-        "constant.language",
-        "constant.numeric",
-        "constant.other.color",
-        "constant.type-constructor.elm",
-        "constant",
-        "entity.name.function",
-        "entity.name.tag",
-        // "entity.name.type.class.ts",
-        "entity.name.type.js",
-        "entity.name.variable.local",
-        "keyword.other.unit",
-        "markup.changed.git_gutter",
-        "markup.deleted.git_gutter",
-        "markup.fenced_code.block.markdown",
-        "markup.inline.raw.string.markdown",
-        "markup.raw.block.fenced.markdown",
-        "markup.raw.block",
-        "meta.tag.sgml",
-        "meta.use.php",
-        "storage.type.class.jsdoc",
-        "support.class",
-        "support.constant",
-        "support.function.general.tex",
-        "support.orther.namespace.use.php",
-        "support.other.namespace.php",
-        "support.type.sys-types",
-        "support.type",
-        "text.html.markdown markup.inline.raw.markdown",
-        "variable.language",
-        "variable.other.constant",
-        "variable.other.object",
+    //     "constant.character",
+    //     "constant.escape",
+    //     "constant.language",
+    //     "constant.numeric",
+    //     "constant.other.color",
+    //     "constant.type-constructor.elm",
+    //     "entity.name.function",
+    //     "entity.name.tag",
+    //     // "entity.name.type.class.ts",
+    //     "entity.name.type.js",
+    //     "entity.name.variable.local",
+    //     "keyword.other.unit",
+    //     "markup.changed.git_gutter",
+    //     "markup.deleted.git_gutter",
+    //     "markup.fenced_code.block.markdown",
+    //     "markup.inline.raw.string.markdown",
+    //     "markup.raw.block.fenced.markdown",
+    //     "markup.raw.block",
+    //     "meta.tag.sgml",
+    //     "meta.use.php",
+    //     "storage.type.class.jsdoc",
+    //     "support.class",
+    //     "support.constant",
+    //     "support.function.general.tex",
+    //     "support.orther.namespace.use.php",
+    //     "support.other.namespace.php",
+    //     "support.type.sys-types",
+    //     "support.type",
+    //     "text.html.markdown markup.inline.raw.markdown",
+    //     "variable.language",
+    //     "variable.other.constant",
       ],
       "settings": {
         "foreground": "#660000"
       }
     },
-    {
-      "name": "slate: classes, object literal keys",
-      "scope": [
-        "entity.name.type.class",
-        "entity.name.type.module",
-        "entity.name.variable.parameter",
-        "entity.name",
-        "entity",
-        "keyword.control.preamble.latex",
-        "variable.language.elixir",
-        "variable.other.class"
-      ],
-      "settings": {
-        "foreground": "#587182"
-      }
-    },
+    // {
+    //   "name": "slate: classes, object literal keys",
+    //   "scope": [
+    //     "entity.name.type.class",
+    //     "entity.name.type.module",
+    //     "entity.name.variable.parameter",
+    //     "entity.name",
+    //     "entity",
+    //     "keyword.control.preamble.latex",
+    //     "variable.language.elixir",
+    //     "variable.other.class"
+    //   ],
+    //   "settings": {
+    //     "foreground": "#587182"
+    //   }
+    // },
     {
       "name": "navy: properties, variables, methods",
       "scope": [
-        "entity.name.module.js",
-        "entity.name.record.field.accessor.elm",
-        "entity.name.variable.field",
-        "keyword.other.special-method",
-        "keyword.other.unit",
-        "meta.class-method.js entity.name.function.js",
-        "meta.function-call",
-        "meta.jsx.children.js.jsx",
-        "meta",
-        "string.other.link",
-        "string.regexp keyword",
-        "string.regexp meta punctuation meta.assertion",
-        "string.regexp meta punctuation",
-        "string.regexp punctuation",
-        "support.function",
-        "support.other.variable",
-        "support.type",
-        "support",
-        "variable.function.constructor",
-        "variable.function",
-        "variable.import.parameter.js",
-        "variable.other.object.property",
-        "variable.other.property.js.jsx",
-        "variable.other.property.js",
-        "variable.other.property.ts",
-        "variable.other.readwrite.js.jsx",
-        "variable.other.readwrite.ts",
-        "variable.other.readwrite.tsx",
-        "variable.parameter",
-        "variable.other.constant.ts",
+          "constant",
+        //     "entity.name.module.js",
+        //     "entity.name.record.field.accessor.elm",
+        //     "entity.name.variable.field",
+        //     "keyword.other.special-method",
+        //     "keyword.other.unit",
+        //     "meta.class-method.js entity.name.function.js",
+        //     "meta.function-call",
+        //     "meta.jsx.children.js.jsx",
+          "meta",
+        //     "string.other.link",
+        //     "string.regexp keyword",
+        //     "string.regexp meta punctuation meta.assertion",
+        //     "string.regexp meta punctuation",
+        //     "string.regexp punctuation",
+        //     "support.function",
+        //     "support.other.variable",
+        //     "support.type",
+        //     "support",
+        //     "variable.function.constructor",
+        //     "variable.function",
+        //     "variable.import.parameter.js",
+        //     "variable.other.object.property",
+        //     "variable.other.property.js.jsx",
+        //     "variable.other.property.js",
+        //     "variable.other.property.ts",
+        //     "variable.other.readwrite.js.jsx",
+        //     "variable.other.readwrite.ts",
+        //     "variable.other.readwrite.tsx",
+        //     "variable.other.constant.ts",
+          "variable",
       ],
       "settings": {
         "foreground": "#3e454e"
@@ -156,39 +164,39 @@
     {
       "name": "orange: keyword, control, storage",
       "scope": [
-        "entity.other.attribute-name.class",
-        "keyword.control.newline.tex",
-        "keyword.other.special-method.elixir",
+    //     "entity.other.attribute-name.class",
+    //     "keyword.control.newline.tex",
+    //     "keyword.other.special-method.elixir",
         "keyword",
-        "markdown.heading",
-        "markup.heading | markup.heading entity.name",
-        "markup.heading.markdown punctuation.definition.heading.markdown",
-        "markup.heading.setext",
-        "markup.quote punctuation.definition.blockquote.markdown",
-        "meta.separator",
-        "meta.structure.tuple.erlang",
-        "punctuation.definition.constant.elixir", // atom colons
-        "punctuation.definition.constant.ruby",
-        "punctuation.definition.list.begin.markdown",
-        "punctuation.definition.quote.begin.markdown",
-        "punctuation.definition.raw.markdown",
-        "punctuation.separator.clause-head-body.erlang",
-        "punctuation.separator.dictionary.key-value.json",
-        "punctuation.separator.key-value",
-        "source.sass keyword.control",
-        "storage.modifier.import",
-        "storage.modifier.package",
-        "storage.modifier",
-        "storage.type.function",
-        "storage.type.primitive",
-        "storage.type.ts",
-        "storage.type",
+    //     "markdown.heading",
+    //     "markup.heading | markup.heading entity.name",
+    //     "markup.heading.markdown punctuation.definition.heading.markdown",
+    //     "markup.heading.setext",
+    //     "markup.quote punctuation.definition.blockquote.markdown",
+    //     "meta.separator",
+    //     "meta.structure.tuple.erlang",
+    //     "punctuation.definition.constant.elixir", // atom colons
+    //     "punctuation.definition.constant.ruby",
+    //     "punctuation.definition.list.begin.markdown",
+    //     "punctuation.definition.quote.begin.markdown",
+    //     "punctuation.definition.raw.markdown",
+    //     "punctuation.separator.clause-head-body.erlang",
+    //     "punctuation.separator.dictionary.key-value.json",
+    //     "punctuation.separator.key-value",
+    //     "source.sass keyword.control",
+    //     "storage.modifier.import",
+    //     "storage.modifier.package",
+    //     "storage.modifier",
+    //     "storage.type.function",
+    //     "storage.type.primitive",
+    //     "storage.type.ts",
+    //     "storage.type",
         "storage",
-        "support.function.be.latex",
-        "support.function.section.latex",
-        "support.function.textbf.latex",
-        "support.function.textit.latex",
-        "support.function.url.latex"
+    //     "support.function.be.latex",
+    //     "support.function.section.latex",
+    //     "support.function.textbf.latex",
+    //     "support.function.textit.latex",
+    //     "support.function.url.latex"
       ],
       "settings": {
         "foreground": "#9a4e32"
@@ -197,18 +205,18 @@
     {
       "name": "brown: punctuation",
       "scope": [
-        "constant.other.color",
-        "keyword.other.substitution",
-        "keyword.other.template",
-        "meta.tag",
-        "punctuation.definition.fenced.markdown",
-        "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html",
-        "punctuation.definition.tag.html",
-        "punctuation.definition.tag",
-        "punctuation.section.class.end",
-        "punctuation.section.function.elixir",
-        "punctuation.separator.inheritance.php",
+        // "constant.other.color",
+        // "keyword.other.substitution",
+        // "keyword.other.template",
+        // "meta.tag",
+        // "punctuation.definition.fenced.markdown",
+        // "punctuation.definition.tag.begin.html",
+        // "punctuation.definition.tag.end.html",
+        // "punctuation.definition.tag.html",
+        // "punctuation.definition.tag",
+        // "punctuation.section.class.end",
+        // "punctuation.section.function.elixir",
+        // "punctuation.separator.inheritance.php",
         "punctuation"
       ],
       "settings": {
@@ -218,23 +226,23 @@
     {
       "name": "pink: interpolations, regular expressions",
       "scope": [
-        "constant.character.format.placeholder.other.python",
-        "constant.numeric.math.tex",
-        "entity.other.inherited-class.ruby",
-        "meta.preprocessor",
-        "punctuation.definition.template-expression.begin",
-        "punctuation.definition.template-expression.end",
-        "punctuation.section.embedded",
-        "string.other.link.description.markdown",
-        "string.other.link.title.markdown",
+    //     "constant.character.format.placeholder.other.python",
+    //     "constant.numeric.math.tex",
+    //     "entity.other.inherited-class.ruby",
+    //     "meta.preprocessor",
+    //     "punctuation.definition.template-expression.begin",
+    //     "punctuation.definition.template-expression.end",
+    //     "punctuation.section.embedded",
+    //     "string.other.link.description.markdown",
+    //     "string.other.link.title.markdown",
         "string.regexp",
-        "string.regexp meta.group",
-        "string.regexp constant.other",
-        "support.class.latex",
-        "support.class.math.latex",
-        "support.module.elm",
-        "variable.interpolation",
-        "entity.name.type.class.ts",
+    //     "string.regexp meta.group",
+    //     "string.regexp constant.other",
+    //     "support.class.latex",
+    //     "support.class.math.latex",
+    //     "support.module.elm",
+    //     "variable.interpolation",
+    //     "entity.name.type.class.ts",
       ],
       "settings": {
         "foreground": "#93255b"
@@ -244,12 +252,12 @@
       "name": "sea green: functions",
       "scope": [
         "entity.name.function",
-        "entity.name.section.latex",
-        "keyword.control.layout.tex",
-        "keyword.control.ref.latex",
-        "meta.function.embedded.latex",
-        "storage.type.format.python",
-        "support.function.magic.python"
+        // "entity.name.section.latex",
+        // "keyword.control.layout.tex",
+        // "keyword.control.ref.latex",
+        // "meta.function.embedded.latex",
+        // "storage.type.format.python",
+        // "support.function.magic.python"
       ],
       "settings": {
         "foreground": "#2c5851"
@@ -258,28 +266,27 @@
     {
       "name": "purple: atoms, function params, list items, types",
       "scope": [
-        "constant.other.reference.label.latex",
-        "constant.other.reference.link.markdown",
-        "constant.other.symbol", // atoms
-        "constant.other",
-        "markup.list meta.paragraph.markdown",
-        "meta.block variable.other",
-        "meta.block",
-        "punctuation.section.list.begin.elixir",
-        "punctuation.section.list.end.elixir",
-        "punctuation.section.regexp.begin.elixir",
-        "punctuation.section.regexp.end.elixir",
-        "storage.type.core",
-        "storage.type.elm",
-        "variable.object.property.ts",
-        "variable.other.readwrite.js",
-        "variable.other",
-        "variable.parameter.function.language.python",
-        "variable.parameter.function.language.special.self.python",
-        "variable.parameter.function",
+        // "constant.other.reference.label.latex",
+        // "constant.other.reference.link.markdown",
+        // "constant.other.symbol", // atoms
+        // "constant.other",
+        // "markup.list meta.paragraph.markdown",
+        // "meta.block variable.other",
+        // "meta.block",
+        // "punctuation.section.list.begin.elixir",
+        // "punctuation.section.list.end.elixir",
+        // "punctuation.section.regexp.begin.elixir",
+        // "punctuation.section.regexp.end.elixir",
+        // "storage.type.core",
+        // "storage.type.elm",
+        // "variable.object.property.ts",
+        // "variable.other.readwrite.js",
+        // "variable.other",
+        // "variable.parameter.function.language.python",
+        // "variable.parameter.function.language.special.self.python",
+        // "variable.parameter.function",
         "variable.parameter",
-        "variable.type.elm",
-        "variable"
+        // "variable.type.elm",
       ],
       "settings": {
         "foreground": "#490049"
@@ -288,60 +295,60 @@
     {
       "name": "forest green: strings",
       "scope": [
-        "constant.other.key",
-        "constant.other.object.key.js",
-        "markup.heading",
-        "markup.inserted.git_gutter",
-        "meta.group.braces.curly",
-        "string.unquoted.label.js",
+        // "constant.other.key",
+        // "constant.other.object.key.js",
+        // "markup.heading",
+        // "markup.inserted.git_gutter",
+        // "meta.group.braces.curly",
+        // "string.unquoted.label.js",
         "string"
       ],
       "settings": {
         "foreground": "#5b5c31"
       }
     },
-    {
-      "name": "blue: keys, objects, module attributes",
-      "scope": [
-        "constant.other.general.math.tex",
-        "entity.name.record.field.elm",
-        "entity.name.type.interface.ts",
-        // "entity.name.type.ts",
-        "entity.other.attribute-name",
-        "entity.other.inherited-class",
-        "meta.object-literal.key",
-        "source.css support.type.property-name",
-        "source.json meta.structure.dictionary.json support.type.property-name.json",
-        "source.less support.type.property-name",
-        "source.postcss support.type.property-name",
-        "source.sass support.type.property-name",
-        "source.scss support.type.property-name",
-        "source.stylus support.type.property-name",
-        "storage.modifier.import.java",
-        "string.other.link.description.title.markdown",
-        "support.type.object",
-        // "variable.other.object",
-        "variable.other.readwrite.module.elixir",
-        // "variable.other.readwrite",
-        "variable.parameter.function-call.python"
-      ],
-      "settings": {
-        "foreground": "#43596f"
-      }
-    },
-    {
-      "name": "teal: escapes, placeholders",
-      "scope": [
-        "constant.character.escape",
-        "constant.character.numeric.regexp",
-        "constant.character",
-        "constant.other.character-class.regexp",
-        "string constant.other.placeholder",
-      ],
-      "settings": {
-        "foreground": "#407875"
-      }
-    },
+    // {
+    //   "name": "blue: keys, objects, module attributes",
+    //   "scope": [
+    //     "constant.other.general.math.tex",
+    //     "entity.name.record.field.elm",
+    //     "entity.name.type.interface.ts",
+    //     // "entity.name.type.ts",
+    //     "entity.other.attribute-name",
+    //     "entity.other.inherited-class",
+    //     "meta.object-literal.key",
+    //     "source.css support.type.property-name",
+    //     "source.json meta.structure.dictionary.json support.type.property-name.json",
+    //     "source.less support.type.property-name",
+    //     "source.postcss support.type.property-name",
+    //     "source.sass support.type.property-name",
+    //     "source.scss support.type.property-name",
+    //     "source.stylus support.type.property-name",
+    //     "storage.modifier.import.java",
+    //     "string.other.link.description.title.markdown",
+    //     "support.type.object",
+    //     // "variable.other.object",
+    //     "variable.other.readwrite.module.elixir",
+    //     // "variable.other.readwrite",
+    //     "variable.parameter.function-call.python"
+    //   ],
+    //   "settings": {
+    //     "foreground": "#43596f"
+    //   }
+    // },
+    // {
+    //   "name": "teal: escapes, placeholders",
+    //   "scope": [
+    //     "constant.character.escape",
+    //     "constant.character.numeric.regexp",
+    //     "constant.character",
+    //     "constant.other.character-class.regexp",
+    //     "string constant.other.placeholder",
+    //   ],
+    //   "settings": {
+    //     "foreground": "#407875"
+    //   }
+    // },
     {
       "name": "JS method names",
       "scope": [
