@@ -179,6 +179,7 @@
         "keyword.control.ref.latex",
         "meta.function.embedded.latex",
         "support.function.magic.python",
+        "entity.other.attribute-name.pseudo-class.css",
       ],
       "settings": {
         "foreground": "#2c5851"
