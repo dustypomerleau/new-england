@@ -43,6 +43,7 @@
         "variable.other.constant", // navy for JS/TS
         "variable.other.object",
         "variable.type.elm",
+        "support.constant.property-value.css",
       ],
       "settings": {
         "foreground": "#660000"
@@ -163,6 +164,7 @@
         "support.class.math.latex",
         "variable.interpolation",
         "storage.type.format.python",
+        "entity.other.attribute-name.id.css",
       ],
       "settings": {
         "foreground": "#93255b"
