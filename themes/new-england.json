@@ -19,6 +19,7 @@
         "storage.type.java",
         "variable.other.readwrite",
         "constant.type-constructor.elm",
+        "keyword.control.at-rule",
       ],
       "settings": {
         "foreground": "#664400"
@@ -119,7 +120,8 @@
         "support.function.section.latex",
         "support.function.textbf.latex",
         "support.function.textit.latex",
-        "support.function.url.latex"
+        "support.function.url.latex",
+        "entity.other.attribute-name.class.css",
       ],
       "settings": {
         "foreground": "#9a4e32"
@@ -174,7 +176,7 @@
         "keyword.control.layout.tex",
         "keyword.control.ref.latex",
         "meta.function.embedded.latex",
-        "support.function.magic.python"
+        "support.function.magic.python",
       ],
       "settings": {
         "foreground": "#2c5851"
@@ -196,6 +198,7 @@
         "storage.type.elm",
         "variable.other.object.js",
         "variable.parameter",
+        "entity.name.tag.css",
       ],
       "settings": {
         "foreground": "#490049"
@@ -206,7 +209,8 @@
       "scope": [
         "markup.heading",
         "markup.inserted.git_gutter",
-        "string"
+        "string",
+        "variable.parameter.url.css",
       ],
       "settings": {
         "foreground": "#5b5c31"
