@@ -1,372 +1,354 @@
-# https://github.com/python/cpython/blob/master/Lib/test/test_modulefinder.py
+# https://github.com/python/cpython/blob/master/Lib/multiprocessing/forkserver.py
 
-import os
 import errno
-import importlib.machinery
-import py_compile
-import shutil
-import unittest
-import tempfile
+import os
+import selectors
+import signal
+import socket
+import struct
+import sys
+import threading
+import warnings
 
-from test import support
+from . import connection
+from . import process
+from .context import reduction
+from . import resource_tracker
+from . import spawn
+from . import util
 
-import modulefinder
+__all__ = ['ensure_running', 'get_inherited_fds', 'connect_to_new_process',
+           'set_forkserver_preload']
 
-TEST_DIR = tempfile.mkdtemp()
-TEST_PATH = [TEST_DIR, os.path.dirname(tempfile.__file__)]
-
-# Each test description is a list of 5 items:
 #
-# 1. a module name that will be imported by modulefinder
-# 2. a list of module names that modulefinder is required to find
-# 3. a list of module names that modulefinder should complain
-#    about because they are not found
-# 4. a list of module names that modulefinder should complain
-#    about because they MAY be not found
-# 5. a string specifying packages to create; the format is obvious imo.
 #
-# Each package will be created in TEST_DIR, and TEST_DIR will be
-# removed after the tests again.
-# Modulefinder searches in a path that contains TEST_DIR, plus
-# the standard Lib directory.
+#
 
-maybe_test = [
-    "a.module",
-    ["a", "a.module", "sys",
-     "b"],
-    ["c"], ["b.something"],
-    """\
-a/__init__.py
-a/module.py
-                                from b import something
-                                from c import something
-b/__init__.py
-                                from sys import *
-"""]
+MAXFDS_TO_SEND = 256
+SIGNED_STRUCT = struct.Struct('q')     # large enough for pid_t
 
-maybe_test_new = [
-    "a.module",
-    ["a", "a.module", "sys",
-     "b", "__future__"],
-    ["c"], ["b.something"],
-    """\
-a/__init__.py
-a/module.py
-                                from b import something
-                                from c import something
-b/__init__.py
-                                from __future__ import absolute_import
-                                from sys import *
-"""]
+#
+# Forkserver class
+#
 
-package_test = [
-    "a.module",
-    ["a", "a.b", "a.c", "a.module", "mymodule", "sys"],
-    ["blahblah", "c"], [],
-    """\
-mymodule.py
-a/__init__.py
-                                import blahblah
-                                from a import b
-                                import c
-a/module.py
-                                import sys
-                                from a import b as x
-                                from a.c import sillyname
-a/b.py
-a/c.py
-                                from a.module import x
-                                import mymodule as sillyname
-                                from sys import version_info
-"""]
+class ForkServer(object):
 
-absolute_import_test = [
-    "a.module",
-    ["a", "a.module",
-     "b", "b.x", "b.y", "b.z",
-     "__future__", "sys", "gc"],
-    ["blahblah", "z"], [],
-    """\
-mymodule.py
-a/__init__.py
-a/module.py
-                                from __future__ import absolute_import
-                                import sys # sys
-                                import blahblah # fails
-                                import gc # gc
-                                import b.x # b.x
-                                from b import y # b.y
-                                from b.z import * # b.z.*
-a/gc.py
-a/sys.py
-                                import mymodule
-a/b/__init__.py
-a/b/x.py
-a/b/y.py
-a/b/z.py
-b/__init__.py
-                                import z
-b/unused.py
-b/x.py
-b/y.py
-b/z.py
-"""]
+    def __init__(self):
+        self._forkserver_address = None
+        self._forkserver_alive_fd = None
+        self._forkserver_pid = None
+        self._inherited_fds = None
+        self._lock = threading.Lock()
+        self._preload_modules = ['__main__']
 
-relative_import_test = [
-    "a.module",
-    ["__future__",
-     "a", "a.module",
-     "a.b", "a.b.y", "a.b.z",
-     "a.b.c", "a.b.c.moduleC",
-     "a.b.c.d", "a.b.c.e",
-     "a.b.x",
-     "gc"],
-    [], [],
-    """\
-mymodule.py
-a/__init__.py
-                                from .b import y, z # a.b.y, a.b.z
-a/module.py
-                                from __future__ import absolute_import # __future__
-                                import gc # gc
-a/gc.py
-a/sys.py
-a/b/__init__.py
-                                from ..b import x # a.b.x
-                                #from a.b.c import moduleC
-                                from .c import moduleC # a.b.moduleC
-a/b/x.py
-a/b/y.py
-a/b/z.py
-a/b/g.py
-a/b/c/__init__.py
-                                from ..c import e # a.b.c.e
-a/b/c/moduleC.py
-                                from ..c import d # a.b.c.d
-a/b/c/d.py
-a/b/c/e.py
-a/b/c/x.py
-"""]
+    def _stop(self):
+        # Method used by unit tests to stop the server
+        with self._lock:
+            self._stop_unlocked()
 
-relative_import_test_2 = [
-    "a.module",
-    ["a", "a.module",
-     "a.sys",
-     "a.b", "a.b.y", "a.b.z",
-     "a.b.c", "a.b.c.d",
-     "a.b.c.e",
-     "a.b.c.moduleC",
-     "a.b.c.f",
-     "a.b.x",
-     "a.another"],
-    [], [],
-    """\
-mymodule.py
-a/__init__.py
-                                from . import sys # a.sys
-a/another.py
-a/module.py
-                                from .b import y, z # a.b.y, a.b.z
-a/gc.py
-a/sys.py
-a/b/__init__.py
-                                from .c import moduleC # a.b.c.moduleC
-                                from .c import d # a.b.c.d
-a/b/x.py
-a/b/y.py
-a/b/z.py
-a/b/c/__init__.py
-                                from . import e # a.b.c.e
-a/b/c/moduleC.py
-                                #
-                                from . import f   # a.b.c.f
-                                from .. import x  # a.b.x
-                                from ... import another # a.another
-a/b/c/d.py
-a/b/c/e.py
-a/b/c/f.py
-"""]
+    def _stop_unlocked(self):
+        if self._forkserver_pid is None:
+            return
 
-relative_import_test_3 = [
-    "a.module",
-    ["a", "a.module"],
-    ["a.bar"],
-    [],
-    """\
-a/__init__.py
-                                def foo(): pass
-a/module.py
-                                from . import foo
-                                from . import bar
-"""]
+        # close the "alive" file descriptor asks the server to stop
+        os.close(self._forkserver_alive_fd)
+        self._forkserver_alive_fd = None
 
-relative_import_test_4 = [
-    "a.module",
-    ["a", "a.module"],
-    [],
-    [],
-    """\
-a/__init__.py
-                                def foo(): pass
-a/module.py
-                                from . import *
-"""]
+        os.waitpid(self._forkserver_pid, 0)
+        self._forkserver_pid = None
 
-bytecode_test = [
-    "a",
-    ["a"],
-    [],
-    [],
-    ""
-]
+        os.unlink(self._forkserver_address)
+        self._forkserver_address = None
 
-syntax_error_test = [
-    "a.module",
-    ["a", "a.module", "b"],
-    ["b.module"], [],
-    """\
-a/__init__.py
-a/module.py
-                                import b.module
-b/__init__.py
-b/module.py
-                                ?  # SyntaxError: invalid syntax
-"""]
+    def set_forkserver_preload(self, modules_names):
+        '''Set list of module names to try to load in forkserver process.'''
+        if not all(type(mod) is str for mod in self._preload_modules):
+            raise TypeError('module_names must be a list of strings')
+        self._preload_modules = modules_names
 
+    def get_inherited_fds(self):
+        '''Return list of fds inherited from parent process.
 
-same_name_as_bad_test = [
-    "a.module",
-    ["a", "a.module", "b", "b.c"],
-    ["c"], [],
-    """\
-a/__init__.py
-a/module.py
-                                import c
-                                from b import c
-b/__init__.py
-b/c.py
-"""]
+        This returns None if the current process was not started by fork
+        server.
+        '''
+        return self._inherited_fds
 
+    def connect_to_new_process(self, fds):
+        '''Request forkserver to create a child process.
 
-def open_file(path):
-    dirname = os.path.dirname(path)
-    try:
-        os.makedirs(dirname)
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
-    return open(path, "w")
+        Returns a pair of fds (status_r, data_w).  The calling process can read
+        the child process's pid and (eventually) its returncode from status_r.
+        The calling process should write to data_w the pickled preparation and
+        process data.
+        '''
+        self.ensure_running()
+        if len(fds) + 4 >= MAXFDS_TO_SEND:
+            raise ValueError('too many fds')
+        with socket.socket(socket.AF_UNIX) as client:
+            client.connect(self._forkserver_address)
+            parent_r, child_w = os.pipe()
+            child_r, parent_w = os.pipe()
+            allfds = [child_r, child_w, self._forkserver_alive_fd,
+                      resource_tracker.getfd()]
+            allfds += fds
+            try:
+                reduction.sendfds(client, allfds)
+                return parent_r, parent_w
+            except:
+                os.close(parent_r)
+                os.close(parent_w)
+                raise
+            finally:
+                os.close(child_r)
+                os.close(child_w)
 
+    def ensure_running(self):
+        '''Make sure that a fork server is running.
 
-def create_package(source):
-    ofi = None
-    try:
-        for line in source.splitlines():
-            if line.startswith(" ") or line.startswith("\t"):
-                ofi.write(line.strip() + "\n")
+        This can be called from any process.  Note that usually a child
+        process will just reuse the forkserver started by its parent, so
+        ensure_running() will do nothing.
+        '''
+        with self._lock:
+            resource_tracker.ensure_running()
+            if self._forkserver_pid is not None:
+                # forkserver was launched before, is it still running?
+                pid, status = os.waitpid(self._forkserver_pid, os.WNOHANG)
+                if not pid:
+                    # still alive
+                    return
+                # dead, launch it again
+                os.close(self._forkserver_alive_fd)
+                self._forkserver_address = None
+                self._forkserver_alive_fd = None
+                self._forkserver_pid = None
+
+            cmd = ('from multiprocessing.forkserver import main; ' +
+                   'main(%d, %d, %r, **%r)')
+
+            if self._preload_modules:
+                desired_keys = {'main_path', 'sys_path'}
+                data = spawn.get_preparation_data('ignore')
+                data = {x: y for x, y in data.items() if x in desired_keys}
             else:
-                if ofi:
-                    ofi.close()
-                ofi = open_file(os.path.join(TEST_DIR, line.strip()))
-    finally:
-        if ofi:
-            ofi.close()
+                data = {}
+
+            with socket.socket(socket.AF_UNIX) as listener:
+                address = connection.arbitrary_address('AF_UNIX')
+                listener.bind(address)
+                os.chmod(address, 0o600)
+                listener.listen()
+
+                # all client processes own the write end of the "alive" pipe;
+                # when they all terminate the read end becomes ready.
+                alive_r, alive_w = os.pipe()
+                try:
+                    fds_to_pass = [listener.fileno(), alive_r]
+                    cmd %= (listener.fileno(), alive_r, self._preload_modules,
+                            data)
+                    exe = spawn.get_executable()
+                    args = [exe] + util._args_from_interpreter_flags()
+                    args += ['-c', cmd]
+                    pid = util.spawnv_passfds(exe, args, fds_to_pass)
+                except:
+                    os.close(alive_w)
+                    raise
+                finally:
+                    os.close(alive_r)
+                self._forkserver_address = address
+                self._forkserver_alive_fd = alive_w
+                self._forkserver_pid = pid
+
+#
+#
+#
+
+def main(listener_fd, alive_r, preload, main_path=None, sys_path=None):
+    '''Run forkserver.'''
+    if preload:
+        if '__main__' in preload and main_path is not None:
+            process.current_process()._inheriting = True
+            try:
+                spawn.import_main_path(main_path)
+            finally:
+                del process.current_process()._inheriting
+        for modname in preload:
+            try:
+                __import__(modname)
+            except ImportError:
+                pass
+
+    util._close_stdin()
+
+    sig_r, sig_w = os.pipe()
+    os.set_blocking(sig_r, False)
+    os.set_blocking(sig_w, False)
+
+    def sigchld_handler(*_unused):
+        # Dummy signal handler, doesn't do anything
+        pass
+
+    handlers = {
+        # unblocking SIGCHLD allows the wakeup fd to notify our event loop
+        signal.SIGCHLD: sigchld_handler,
+        # protect the process from ^C
+        signal.SIGINT: signal.SIG_IGN,
+        }
+    old_handlers = {sig: signal.signal(sig, val)
+                    for (sig, val) in handlers.items()}
+
+    # calling os.write() in the Python signal handler is racy
+    signal.set_wakeup_fd(sig_w)
+
+    # map child pids to client fds
+    pid_to_fd = {}
+
+    with socket.socket(socket.AF_UNIX, fileno=listener_fd) as listener, \
+         selectors.DefaultSelector() as selector:
+        _forkserver._forkserver_address = listener.getsockname()
+
+        selector.register(listener, selectors.EVENT_READ)
+        selector.register(alive_r, selectors.EVENT_READ)
+        selector.register(sig_r, selectors.EVENT_READ)
+
+        while True:
+            try:
+                while True:
+                    rfds = [key.fileobj for (key, events) in selector.select()]
+                    if rfds:
+                        break
+
+                if alive_r in rfds:
+                    # EOF because no more client processes left
+                    assert os.read(alive_r, 1) == b'', "Not at EOF?"
+                    raise SystemExit
+
+                if sig_r in rfds:
+                    # Got SIGCHLD
+                    os.read(sig_r, 65536)  # exhaust
+                    while True:
+                        # Scan for child processes
+                        try:
+                            pid, sts = os.waitpid(-1, os.WNOHANG)
+                        except ChildProcessError:
+                            break
+                        if pid == 0:
+                            break
+                        child_w = pid_to_fd.pop(pid, None)
+                        if child_w is not None:
+                            if os.WIFSIGNALED(sts):
+                                returncode = -os.WTERMSIG(sts)
+                            else:
+                                if not os.WIFEXITED(sts):
+                                    raise AssertionError(
+                                        "Child {0:n} status is {1:n}".format(
+                                            pid,sts))
+                                returncode = os.WEXITSTATUS(sts)
+                            # Send exit code to client process
+                            try:
+                                write_signed(child_w, returncode)
+                            except BrokenPipeError:
+                                # client vanished
+                                pass
+                            os.close(child_w)
+                        else:
+                            # This shouldn't happen really
+                            warnings.warn('forkserver: waitpid returned '
+                                          'unexpected pid %d' % pid)
+
+                if listener in rfds:
+                    # Incoming fork request
+                    with listener.accept()[0] as s:
+                        # Receive fds from client
+                        fds = reduction.recvfds(s, MAXFDS_TO_SEND + 1)
+                        if len(fds) > MAXFDS_TO_SEND:
+                            raise RuntimeError(
+                                "Too many ({0:n}) fds to send".format(
+                                    len(fds)))
+                        child_r, child_w, *fds = fds
+                        s.close()
+                        pid = os.fork()
+                        if pid == 0:
+                            # Child
+                            code = 1
+                            try:
+                                listener.close()
+                                selector.close()
+                                unused_fds = [alive_r, child_w, sig_r, sig_w]
+                                unused_fds.extend(pid_to_fd.values())
+                                code = _serve_one(child_r, fds,
+                                                  unused_fds,
+                                                  old_handlers)
+                            except Exception:
+                                sys.excepthook(*sys.exc_info())
+                                sys.stderr.flush()
+                            finally:
+                                os._exit(code)
+                        else:
+                            # Send pid to client process
+                            try:
+                                write_signed(child_w, pid)
+                            except BrokenPipeError:
+                                # client vanished
+                                pass
+                            pid_to_fd[pid] = child_w
+                            os.close(child_r)
+                            for fd in fds:
+                                os.close(fd)
+
+            except OSError as e:
+                if e.errno != errno.ECONNABORTED:
+                    raise
 
 
-class ModuleFinderTest(unittest.TestCase):
-    def _do_test(self, info, report=False, debug=0, replace_paths=[]):
-        import_this, modules, missing, maybe_missing, source = info
-        create_package(source)
-        try:
-            mf = modulefinder.ModuleFinder(path=TEST_PATH, debug=debug,
-                                           replace_paths=replace_paths)
-            mf.import_hook(import_this)
-            if report:
-                mf.report()
-##                # This wouldn't work in general when executed several times:
-##                opath = sys.path[:]
-##                sys.path = TEST_PATH
-##                try:
-##                    __import__(import_this)
-##                except:
-##                    import traceback; traceback.print_exc()
-##                sys.path = opath
-##                return
-            modules = sorted(set(modules))
-            found = sorted(mf.modules)
-            # check if we found what we expected, not more, not less
-            self.assertEqual(found, modules)
+def _serve_one(child_r, fds, unused_fds, handlers):
+    # close unnecessary stuff and reset signal handlers
+    signal.set_wakeup_fd(-1)
+    for sig, val in handlers.items():
+        signal.signal(sig, val)
+    for fd in unused_fds:
+        os.close(fd)
 
-            # check for missing and maybe missing modules
-            bad, maybe = mf.any_missing_maybe()
-            self.assertEqual(bad, missing)
-            self.assertEqual(maybe, maybe_missing)
-        finally:
-            shutil.rmtree(TEST_DIR)
+    (_forkserver._forkserver_alive_fd,
+     resource_tracker._resource_tracker._fd,
+     *_forkserver._inherited_fds) = fds
 
-    def test_package(self):
-        self._do_test(package_test)
+    # Run process object received over pipe
+    parent_sentinel = os.dup(child_r)
+    code = spawn._main(child_r, parent_sentinel)
 
-    def test_maybe(self):
-        self._do_test(maybe_test)
-
-    def test_maybe_new(self):
-        self._do_test(maybe_test_new)
-
-    def test_absolute_imports(self):
-        self._do_test(absolute_import_test)
-
-    def test_relative_imports(self):
-        self._do_test(relative_import_test)
-
-    def test_relative_imports_2(self):
-        self._do_test(relative_import_test_2)
-
-    def test_relative_imports_3(self):
-        self._do_test(relative_import_test_3)
-
-    def test_relative_imports_4(self):
-        self._do_test(relative_import_test_4)
-
-    def test_syntax_error(self):
-        self._do_test(syntax_error_test)
-
-    def test_same_name_as_bad(self):
-        self._do_test(same_name_as_bad_test)
-
-    def test_bytecode(self):
-        base_path = os.path.join(TEST_DIR, 'a')
-        source_path = base_path + importlib.machinery.SOURCE_SUFFIXES[0]
-        bytecode_path = base_path + importlib.machinery.BYTECODE_SUFFIXES[0]
-        with open_file(source_path) as file:
-            file.write('testing_modulefinder = True\n')
-        py_compile.compile(source_path, cfile=bytecode_path)
-        os.remove(source_path)
-        self._do_test(bytecode_test)
-
-    def test_replace_paths(self):
-        old_path = os.path.join(TEST_DIR, 'a', 'module.py')
-        new_path = os.path.join(TEST_DIR, 'a', 'spam.py')
-        with support.captured_stdout() as output:
-            self._do_test(maybe_test, debug=2,
-                          replace_paths=[(old_path, new_path)])
-        output = output.getvalue()
-        expected = "co_filename %r changed to %r" % (old_path, new_path)
-        self.assertIn(expected, output)
-
-    def test_extended_opargs(self):
-        extended_opargs_test = [
-            "a",
-            ["a", "b"],
-            [], [],
-            """\
-a.py
-                                %r
-                                import b
-b.py
-""" % list(range(2**16))]  # 2**16 constants
-        self._do_test(extended_opargs_test)
+    return code
 
 
-if __name__ == "__main__":
-    unittest.main()
+#
+# Read and write signed numbers
+#
+
+def read_signed(fd):
+    data = b''
+    length = SIGNED_STRUCT.size
+    while len(data) < length:
+        s = os.read(fd, length - len(data))
+        if not s:
+            raise EOFError('unexpected EOF')
+        data += s
+    return SIGNED_STRUCT.unpack(data)[0]
+
+def write_signed(fd, n):
+    msg = SIGNED_STRUCT.pack(n)
+    while msg:
+        nbytes = os.write(fd, msg)
+        if nbytes == 0:
+            raise RuntimeError('should not get here')
+        msg = msg[nbytes:]
+
+#
+#
+#
+
+_forkserver = ForkServer()
+ensure_running = _forkserver.ensure_running
+get_inherited_fds = _forkserver.get_inherited_fds
+connect_to_new_process = _forkserver.connect_to_new_process
+set_forkserver_preload = _forkserver.set_forkserver_preload
