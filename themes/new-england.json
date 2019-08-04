@@ -42,8 +42,8 @@
         "text.html.markdown markup.inline.raw.markdown",
         "variable.other.constant", // navy for JS/TS
         "variable.other.object",
-        "variable.type.elm",
         "support.constant.property-value.css",
+        "support.module.elm",
       ],
       "settings": {
         "foreground": "#660000"
@@ -59,7 +59,6 @@
         "entity.other.inherited-class",
         "keyword.control.preamble.latex",
         "variable.language",
-        "support.module.elm",
       ],
       "settings": {
         "foreground": "#587182"
@@ -203,6 +202,7 @@
         "variable.other.object.js",
         "variable.parameter",
         "entity.name.tag.css",
+        "variable.type.elm",
       ],
       "settings": {
         "foreground": "#490049"
