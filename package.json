@@ -20,7 +20,7 @@
     "color": "#fdf1d4",
     "theme": "light"
   },
-  "icon": "./images/icon.png",
+  "icon": "images/icon.png",
   "keywords": [
     "light",
     "theme",
