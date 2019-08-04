@@ -16,7 +16,7 @@
     {
       "name": "yellow",
       "scope": [
-        "variable.other.readwrite", // start with your booleans and numbers - then you can rehash this if you want-----also tried purple, but this is probably not going to work because there is too much purp in js/x - started as elixir module attributes but try to get away with generalizing - very heavy in js(x)/ts(x) so this may be too much - perhaps ok if you make objects red again or some other variation - consider changing boolean or number color so they aren't the same 
+        "variable.other.readwrite", // start with your booleans and numbers - then you can rehash this if you want - for TS it's ok but for JS it's no good with red objects (way too much red in react) - probably go with yellow objects and navy variable.other.readwrite for JS - maybe leave TS unchanged-----also tried purple, but this is probably not going to work because there is too much purp in js/x - started as elixir module attributes but try to get away with generalizing - very heavy in js(x)/ts(x) so this may be too much - perhaps ok if you make objects red again or some other variation - consider changing boolean or number color so they aren't the same 
       ],
       "settings": {
         "foreground": "#664400"
@@ -27,11 +27,10 @@
       "scope": [
     //     "constant.character",
     //     "constant.escape",
-    //     "constant.language",
-    //     "constant.numeric",
+        "constant.language",
+        "constant.numeric",
     //     "constant.other.color",
     //     "constant.type-constructor.elm",
-    //     "entity.name.function",
         "entity.name.tag",
     //     // "entity.name.type.class.ts",
     //     "entity.name.type.js",
@@ -232,6 +231,7 @@
     {
       "name": "purple: atoms, function params, list items, types",
       "scope": [
+        "constant.language.symbol",
         "constant.other.reference.label.latex",
         "constant.other.reference.link.markdown",
         "constant.other.symbol", // atoms
