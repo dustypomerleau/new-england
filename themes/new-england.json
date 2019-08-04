@@ -26,7 +26,7 @@
       }
     },
     {
-      "name": "red: constants, variables, tags",
+      "name": "red: numbers, language constants, support modules, tags",
       "scope": [
         "constant.language",
         "constant.numeric",
@@ -38,34 +38,34 @@
         "markup.raw.block.fenced.markdown",
         "markup.raw.block",
         "support.class",
+        "support.constant.property-value.css",
         "support.function.general.tex",
+        "support.module.elm",
         "text.html.markdown markup.inline.raw.markdown",
         "variable.other.constant", // navy for JS/TS
-        "variable.other.object",
-        "support.constant.property-value.css",
-        "support.module.elm",
+        "variable.other.object"
       ],
       "settings": {
         "foreground": "#660000"
       }
     },
     {
-      "name": "slate: classes, object literal keys",
+      "name": "slate: classes, modules, language variables",
       "scope": [
-        "entity.name.type.class",
-        "entity.name.type.module",
         "entity.name.class",
         "entity.name.section",
+        "entity.name.type.class",
+        "entity.name.type.module",
         "entity.other.inherited-class",
         "keyword.control.preamble.latex",
-        "variable.language",
+        "variable.language"
       ],
       "settings": {
         "foreground": "#587182"
       }
     },
     {
-      "name": "navy: properties, variables, methods",
+      "name": "navy: default for variables and constants",
       "scope": [
         "constant",
         "entity.name.record.field.accessor.elm",
@@ -76,7 +76,7 @@
         "variable.other.constant.jsx",
         "variable.other.constant.ts",
         "variable.other.constant.tsx",
-        "variable",
+        "variable"
       ],
       "settings": {
         "foreground": "#3e454e"
@@ -94,8 +94,9 @@
       }
     },
     {
-      "name": "orange: keyword, control, storage",
+      "name": "orange: keywords, control, storage",
       "scope": [
+        "entity.other.attribute-name.class.css",
         "keyword.control.newline.tex",
         "keyword",
         "markdown.heading",
@@ -105,12 +106,11 @@
         "markup.quote punctuation.definition.blockquote.markdown",
         "meta.separator",
         "meta.structure.tuple.erlang",
+        "punctuation.definition.constant.elixir",
         "punctuation.definition.constant.ruby",
         "punctuation.definition.list.begin.markdown",
         "punctuation.definition.quote.begin.markdown",
         "punctuation.definition.raw.markdown",
-        "variable.other.anonymous.elixir punctuation.definition.variable.elixir",
-        "punctuation.definition.constant.elixir",
         "punctuation.separator.clause-head-body.erlang",
         "punctuation.separator.dictionary.key-value.json",
         "punctuation.separator.key-value",
@@ -121,7 +121,7 @@
         "support.function.textbf.latex",
         "support.function.textit.latex",
         "support.function.url.latex",
-        "entity.other.attribute-name.class.css",
+        "variable.other.anonymous.elixir punctuation.definition.variable.elixir"
       ],
       "settings": {
         "foreground": "#9a4e32"
@@ -143,27 +143,27 @@
       "name": "pink: interpolations, regular expressions",
       "scope": [
         "constant.numeric.math.tex",
+        "entity.other.attribute-name.id.css",
         "punctuation.definition.template-expression.begin",
         "punctuation.definition.template-expression.end",
         "punctuation.quasi.element.begin.js",
         "punctuation.quasi.element.end.js",
         "punctuation.section.embedded",
+        "storage.type.format.python",
         "string.other.link.description.markdown",
         "string.other.link.title.markdown",
-        "string.regexp",
-        "string.regexp keyword",
-        "string.regexp meta.group",
-        "string.regexp meta keyword",
-        "string.regexp constant",
         "string.regexp constant.character",
+        "string.regexp constant",
+        "string.regexp keyword",
+        "string.regexp meta keyword",
         "string.regexp meta punctuation meta.assertion",
         "string.regexp meta punctuation",
+        "string.regexp meta.group",
         "string.regexp punctuation",
+        "string.regexp",
         "support.class.latex",
         "support.class.math.latex",
-        "variable.interpolation",
-        "storage.type.format.python",
-        "entity.other.attribute-name.id.css",
+        "variable.interpolation"
       ],
       "settings": {
         "foreground": "#93255b"
@@ -174,12 +174,12 @@
       "scope": [
         "entity.name.function",
         "entity.name.section.latex",
+        "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.attribute-name.pseudo-element.css",
         "keyword.control.layout.tex",
         "keyword.control.ref.latex",
         "meta.function.embedded.latex",
-        "support.function.magic.python",
-        "entity.other.attribute-name.pseudo-class.css",
-        "entity.other.attribute-name.pseudo-element.css",
+        "support.function.magic.python"
       ],
       "settings": {
         "foreground": "#2c5851"
@@ -192,6 +192,7 @@
         "constant.other.reference.label.latex",
         "constant.other.reference.link.markdown",
         "constant.other.symbol", // atoms
+        "entity.name.tag.css",
         "markup.list meta.paragraph.markdown",
         "meta.function.parameters variable.other.readwrite",
         "punctuation.section.list.begin.elixir",
@@ -201,8 +202,7 @@
         "storage.type.elm",
         "variable.other.object.js",
         "variable.parameter",
-        "entity.name.tag.css",
-        "variable.type.elm",
+        "variable.type.elm"
       ],
       "settings": {
         "foreground": "#490049"
@@ -214,14 +214,14 @@
         "markup.heading",
         "markup.inserted.git_gutter",
         "string",
-        "variable.parameter.url.css",
+        "variable.parameter.url.css"
       ],
       "settings": {
         "foreground": "#5b5c31"
       }
     },
     {
-      "name": "blue: keys, objects, module attributes",
+      "name": "blue: keys, function calls, module attributes",
       "scope": [
         "constant.other.general.math.tex",
         "entity.name.record.field.elm",
@@ -233,7 +233,7 @@
         "meta.object.flowtype variable.other.readwrite",
         "meta.property-name",
         "string.other.link.description.title.markdown",
-        "support.type.property-name",
+        "support.type.property-name"
       ],
       "settings": {
         "foreground": "#43596f"
@@ -245,7 +245,7 @@
         "constant.character.escape",
         "constant.character.numeric.regexp",
         "constant.character",
-        "string constant.other.placeholder",
+        "string constant.other.placeholder"
       ],
       "settings": {
         "foreground": "#407875"
@@ -262,10 +262,10 @@
       }
     },
     {
-      "name": "this",
+      "name": "self, this",
       "scope": [
-        "variable.language.this",
         "variable.language.special.self.python",
+        "variable.language.this"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -317,14 +317,14 @@
     {
       "name": "markup bold text",
       "scope": [
-        "markup.bold",
-        "markup.bold string",
-        "markup.bold markup.italic",
-        "markup.italic markup.bold",
-        "markup.quote markup.bold",
         "markup.bold markup.italic string",
+        "markup.bold markup.italic",
+        "markup.bold string",
+        "markup.bold",
         "markup.italic markup.bold string",
-        "markup.quote markup.bold string"
+        "markup.italic markup.bold",
+        "markup.quote markup.bold string",
+        "markup.quote markup.bold"
       ],
       "settings": {
         "fontStyle": "bold",
