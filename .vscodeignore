@@ -1,3 +1,5 @@
+code-examples/
+images/
 .vscode/**
 .vscode-test/**
 .gitignore
