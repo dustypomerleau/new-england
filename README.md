@@ -8,37 +8,28 @@ PRs for language-specific highlighting improvements are welcome. Scopes can be v
 ## Screenshots:
 
 ## Typescript
-
 ![typescript](./images/typescript.png)
      
 ## React
-
 ![react](./images/react.png)
 
 ## Elixir
-
 ![elixir](./images/elixir.png)
 
 ## Ruby
-
 ![ruby](./images/ruby.png)
 
 ## Elm
-
 ![elm](./images/elm.png)
 
 ## HTML
-
 ![html](./images/html.png)
 
 ## CSS
-
 ![css](./images/css.png)
 
 ## Python
-
 ![python](./images/python.png)
 
 ## Markdown
-
 ![markdown](./images/markdown.png)
