@@ -7,34 +7,38 @@ PRs for language-specific highlighting improvements are welcome. Scopes can be v
 
 ## Screenshots:
 
-### Typescript
+## Typescript
 
 ![typescript](./images/typescript.png)
-
-### React
+     
+## React
 
 ![react](./images/react.png)
 
-### Elm
-
-![elm](./images.elm.png)
-
-### HTML
-
-![html](./images/html.png)
-
-### CSS
-
-![css](./images/css.png)
-
-### Elixir
+## Elixir
 
 ![elixir](./images/elixir.png)
 
-### Ruby
+## Ruby
 
 ![ruby](./images/ruby.png)
 
-### Python
+## Elm
+
+![elm](./images/elm.png)
+
+## HTML
+
+![html](./images/html.png)
+
+## CSS
+
+![css](./images/css.png)
+
+## Python
 
 ![python](./images/python.png)
+
+## Markdown
+
+![markdown](./images/markdown.png)
