@@ -14,7 +14,7 @@
       }
     },
     {
-      "name": "yellow",
+      "name": "yellow: module attributes, Java types, readwrite vars",
       "scope": [
         "storage.type.java",
         "variable.other.readwrite",
