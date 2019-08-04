@@ -180,6 +180,7 @@
         "meta.function.embedded.latex",
         "support.function.magic.python",
         "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.attribute-name.pseudo-element.css",
       ],
       "settings": {
         "foreground": "#2c5851"
