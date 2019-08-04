@@ -16,7 +16,9 @@
     {
       "name": "yellow",
       "scope": [
-        "variable.other.readwrite", // start with your booleans and numbers - then you can rehash this if you want - for TS it's ok but for JS it's no good with red objects (way too much red in react) - probably go with yellow objects and navy variable.other.readwrite for JS - maybe leave TS unchanged-----also tried purple, but this is probably not going to work because there is too much purp in js/x - started as elixir module attributes but try to get away with generalizing - very heavy in js(x)/ts(x) so this may be too much - perhaps ok if you make objects red again or some other variation - consider changing boolean or number color so they aren't the same 
+        "storage.type.java",
+        "variable.other.readwrite",
+        "constant.type-constructor.elm",
       ],
       "settings": {
         "foreground": "#664400"
@@ -25,37 +27,21 @@
     {
       "name": "red: constants, variables, tags",
       "scope": [
-    //     "constant.character",
-    //     "constant.escape",
         "constant.language",
         "constant.numeric",
-    //     "constant.other.color",
-    //     "constant.type-constructor.elm",
         "entity.name.tag",
-    //     // "entity.name.type.class.ts",
-    //     "entity.name.type.js",
-    //     "entity.name.variable.local",
-    //     "keyword.other.unit",
         "markup.changed.git_gutter",
         "markup.deleted.git_gutter",
         "markup.fenced_code.block.markdown",
         "markup.inline.raw.string.markdown",
         "markup.raw.block.fenced.markdown",
         "markup.raw.block",
-    //     "meta.tag.sgml",
-    //     "meta.use.php",
-    //     "storage.type.class.jsdoc",
         "support.class",
-    //     "support.constant",
         "support.function.general.tex",
-    //     "support.orther.namespace.use.php",
-    //     "support.other.namespace.php",
-    //     "support.type.sys-types",
-    //     "support.type",
         "text.html.markdown markup.inline.raw.markdown",
-    //     "variable.language",
-        "variable.other.constant", // heavy in js/ts - may need to uncomment that in navy
+        "variable.other.constant", // navy for JS/TS
         "variable.other.object",
+        "variable.type.elm",
       ],
       "settings": {
         "foreground": "#660000"
@@ -66,13 +52,12 @@
       "scope": [
         "entity.name.type.class",
         "entity.name.type.module",
-        // "entity.name.variable.parameter",
-        // "entity.name",
-        // "entity",
+        "entity.name.class",
+        "entity.name.section",
+        "entity.other.inherited-class",
         "keyword.control.preamble.latex",
-        // "variable.language.elixir",
         "variable.language",
-        // "variable.other.class"
+        "support.module.elm",
       ],
       "settings": {
         "foreground": "#587182"
@@ -81,40 +66,16 @@
     {
       "name": "navy: properties, variables, methods",
       "scope": [
-          "constant",
-        //     "entity.name.module.js",
-        //     "entity.name.record.field.accessor.elm",
-        //     "entity.name.variable.field",
-        //     "keyword.other.special-method",
-        //     "keyword.other.unit",
-        //     "meta.class-method.js entity.name.function.js",
-        //     "meta.function-call", // moved to blue
-        //     "meta.jsx.children.js.jsx",
-          "meta",
-        //     "string.other.link",
-        //     "string.regexp keyword",
-        //     "string.regexp meta punctuation meta.assertion",
-        //     "string.regexp meta punctuation",
-        //     "string.regexp punctuation",
-        //     "support.function",
-        //     "support.other.variable",
-        //     "support.type",
-        //     "support",
-        //     "variable.function.constructor",
-        //     "variable.function",
-        //     "variable.import.parameter.js",
-        //     "variable.other.object.property",
-        //     "variable.other.property.js.jsx",
-        //     "variable.other.property.js",
-        //     "variable.other.property.ts",
-        //     "variable.other.readwrite.js.jsx",
-        //     "variable.other.readwrite.ts",
-        //     "variable.other.readwrite.tsx",
-          "variable.other.constant.js",
-          "variable.other.constant.jsx",
-          "variable.other.constant.ts",
-          "variable.other.constant.tsx",
-          "variable",
+        "constant",
+        "entity.name.record.field.accessor.elm",
+        "keyword.other.unit",
+        "meta",
+        "storage.modifier.import.java",
+        "variable.other.constant.js",
+        "variable.other.constant.jsx",
+        "variable.other.constant.ts",
+        "variable.other.constant.tsx",
+        "variable",
       ],
       "settings": {
         "foreground": "#3e454e"
@@ -134,9 +95,7 @@
     {
       "name": "orange: keyword, control, storage",
       "scope": [
-    //     "entity.other.attribute-name.class",
         "keyword.control.newline.tex",
-    //     "keyword.other.special-method.elixir",
         "keyword",
         "markdown.heading",
         "markup.heading | markup.heading entity.name",
@@ -145,21 +104,16 @@
         "markup.quote punctuation.definition.blockquote.markdown",
         "meta.separator",
         "meta.structure.tuple.erlang",
-        "punctuation.definition.constant",
+        "punctuation.definition.constant.ruby",
         "punctuation.definition.list.begin.markdown",
         "punctuation.definition.quote.begin.markdown",
         "punctuation.definition.raw.markdown",
+        "variable.other.anonymous.elixir punctuation.definition.variable.elixir",
+        "punctuation.definition.constant.elixir",
         "punctuation.separator.clause-head-body.erlang",
         "punctuation.separator.dictionary.key-value.json",
         "punctuation.separator.key-value",
-    //     "source.sass keyword.control",
-    //     "storage.modifier.import",
-    //     "storage.modifier.package",
-    //     "storage.modifier",
-    //     "storage.type.function",
-    //     "storage.type.primitive",
-    //     "storage.type.ts",
-    //     "storage.type",
+        "punctuation.type.flowtype",
         "storage",
         "support.function.be.latex",
         "support.function.section.latex",
@@ -174,15 +128,10 @@
     {
       "name": "brown: punctuation",
       "scope": [
-        // "constant.other.color",
-        // "keyword.other.substitution",
-        // "keyword.other.template",
         "meta.tag",
         "punctuation.definition.fenced.markdown",
-        // "punctuation.section.class.end",
-        // "punctuation.section.function.elixir",
-        // "punctuation.separator.inheritance.php",
-        "punctuation"
+        "punctuation.definition",
+        "punctuation",
       ],
       "settings": {
         "foreground": "#585550"
@@ -191,23 +140,27 @@
     {
       "name": "pink: interpolations, regular expressions",
       "scope": [
-    //     "constant.character.format.placeholder.other.python",
         "constant.numeric.math.tex",
-    //     "entity.other.inherited-class.ruby",
-    //     "meta.preprocessor",
         "punctuation.definition.template-expression.begin",
         "punctuation.definition.template-expression.end",
+        "punctuation.quasi.element.begin.js",
+        "punctuation.quasi.element.end.js",
         "punctuation.section.embedded",
         "string.other.link.description.markdown",
         "string.other.link.title.markdown",
         "string.regexp",
-    //     "string.regexp meta.group",
-    //     "string.regexp constant.other",
+        "string.regexp keyword",
+        "string.regexp meta.group",
+        "string.regexp meta keyword",
+        "string.regexp constant",
+        "string.regexp constant.character",
+        "string.regexp meta punctuation meta.assertion",
+        "string.regexp meta punctuation",
+        "string.regexp punctuation",
         "support.class.latex",
         "support.class.math.latex",
-    //     "support.module.elm",
-    //     "variable.interpolation",
-    //     "entity.name.type.class.ts",
+        "variable.interpolation",
+        "storage.type.format.python",
       ],
       "settings": {
         "foreground": "#93255b"
@@ -221,8 +174,7 @@
         "keyword.control.layout.tex",
         "keyword.control.ref.latex",
         "meta.function.embedded.latex",
-        // "storage.type.format.python",
-        // "support.function.magic.python"
+        "support.function.magic.python"
       ],
       "settings": {
         "foreground": "#2c5851"
@@ -235,25 +187,15 @@
         "constant.other.reference.label.latex",
         "constant.other.reference.link.markdown",
         "constant.other.symbol", // atoms
-        // "constant.other",
         "markup.list meta.paragraph.markdown",
-        // "meta.block variable.other",
-        // "meta.block",
-        // "punctuation.section.list.begin.elixir",
-        // "punctuation.section.list.end.elixir",
-        // "punctuation.section.regexp.begin.elixir",
-        // "punctuation.section.regexp.end.elixir",
-        // "storage.type.core",
-        // "storage.type.elm",
-        // "variable.object.property.ts",
-        // "variable.other.readwrite.js",
-        // "variable.other.readwrite", // check dupes
-        // "variable.other",
-        // "variable.parameter.function.language.python",
-        // "variable.parameter.function.language.special.self.python",
-        // "variable.parameter.function",
+        "meta.function.parameters variable.other.readwrite",
+        "punctuation.section.list.begin.elixir",
+        "punctuation.section.list.end.elixir",
+        "punctuation.section.regexp.begin.elixir",
+        "punctuation.section.regexp.end.elixir",
+        "storage.type.elm",
+        "variable.other.object.js",
         "variable.parameter",
-        // "variable.type.elm",
       ],
       "settings": {
         "foreground": "#490049"
@@ -262,12 +204,8 @@
     {
       "name": "forest green: strings",
       "scope": [
-        // "constant.other.key",
-        // "constant.other.object.key.js",
         "markup.heading",
         "markup.inserted.git_gutter",
-        // "meta.group.braces.curly",
-        // "string.unquoted.label.js",
         "string"
       ],
       "settings": {
@@ -278,22 +216,16 @@
       "name": "blue: keys, objects, module attributes",
       "scope": [
         "constant.other.general.math.tex",
-        // "entity.name.record.field.elm",
-        // "entity.name.type.interface.ts",
-        // // "entity.name.type.ts",
+        "entity.name.record.field.elm",
         "entity.other.attribute-name",
-        // "entity.other.inherited-class",
         "meta.function-call entity.name.function",
+        "meta.method-call entity.name.function",
         "meta.object-literal.key",
+        "meta.object.flowtype storage.type.function",
+        "meta.object.flowtype variable.other.readwrite",
         "meta.property-name",
-        // "storage.modifier.import.java",
         "string.other.link.description.title.markdown",
-        // "support.type.object",
         "support.type.property-name",
-        // // "variable.other.object",
-        // "variable.other.readwrite.module.elixir",
-        // "variable.other.readwrite", // yellow atm
-        // "variable.parameter.function-call.python"
       ],
       "settings": {
         "foreground": "#43596f"
@@ -305,7 +237,6 @@
         "constant.character.escape",
         "constant.character.numeric.regexp",
         "constant.character",
-        "constant.other.character-class.regexp",
         "string constant.other.placeholder",
       ],
       "settings": {
@@ -325,7 +256,8 @@
     {
       "name": "this",
       "scope": [
-        "variable.language.this"
+        "variable.language.this",
+        "variable.language.special.self.python",
       ],
       "settings": {
         "fontStyle": "italic",
