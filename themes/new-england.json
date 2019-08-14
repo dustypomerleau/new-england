@@ -6,7 +6,8 @@
       "name": "comments",
       "scope": [
         "comment",
-        "punctuation.definition.comment"
+        "punctuation.definition.comment",
+        "string.quoted.docstring"
       ],
       "settings": {
         "fontStyle": "italic",
@@ -16,10 +17,11 @@
     {
       "name": "yellow: module attributes, Java types, readwrite vars",
       "scope": [
-        "storage.type.java",
-        "variable.other.readwrite",
         "constant.type-constructor.elm",
+        "entity.name.type.namespace.scope-resolution.cpp",
         "keyword.control.at-rule",
+        "storage.type.java",
+        "variable.other.readwrite"
       ],
       "settings": {
         "foreground": "#664400"
@@ -114,6 +116,8 @@
         "punctuation.separator.clause-head-body.erlang",
         "punctuation.separator.dictionary.key-value.json",
         "punctuation.separator.key-value",
+        "punctuation.separator.namespace.access.cpp",
+        "punctuation.separator.pointer-access.cpp",
         "punctuation.type.flowtype",
         "storage",
         "support.function.be.latex",
@@ -133,7 +137,7 @@
         "meta.tag",
         "punctuation.definition.fenced.markdown",
         "punctuation.definition",
-        "punctuation",
+        "punctuation"
       ],
       "settings": {
         "foreground": "#585550"
@@ -201,6 +205,7 @@
         "punctuation.section.regexp.end.elixir",
         "storage.type.elm",
         "variable.other.object.js",
+        "variable.other",
         "variable.parameter",
         "variable.type.elm"
       ],
@@ -224,6 +229,7 @@
       "name": "blue: keys, function calls, module attributes",
       "scope": [
         "constant.other.general.math.tex",
+        "entity.name.function.member.cpp",
         "entity.name.record.field.elm",
         "entity.other.attribute-name",
         "meta.function-call entity.name.function",
