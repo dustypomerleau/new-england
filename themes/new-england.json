@@ -21,6 +21,7 @@
         "entity.name.type.namespace.scope-resolution.cpp",
         "keyword.control.at-rule",
         "meta.block.c",
+        "meta.function.parameters.php variable.other.php",
         "parameter.variable.function.elixir",
         "storage.type.java",
         "variable.other.readwrite"
