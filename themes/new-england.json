@@ -23,6 +23,7 @@
         "meta.block.c",
         "meta.function.parameters.php variable.other.php",
         "parameter.variable.function.elixir",
+        "source.cpp entity.name.scope-resolution",
         "storage.type.java",
         "variable.other.readwrite"
       ],
@@ -122,6 +123,7 @@
         "punctuation.separator.namespace.access.cpp",
         "punctuation.separator.pointer-access.cpp",
         "punctuation.type.flowtype",
+        "source.cpp punctuation.separator.scope-resolution",
         "storage",
         "support.function.be.latex",
         "support.function.section.latex",
@@ -232,6 +234,7 @@
       "name": "blue: keys, function calls, module attributes",
       "scope": [
         "constant.other.general.math.tex",
+        "entity.name.function.call.cpp",
         "entity.name.function.member.cpp",
         "entity.name.record.field.elm",
         "entity.other.attribute-name",
