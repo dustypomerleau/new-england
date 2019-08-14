@@ -121,7 +121,7 @@
         "punctuation.separator.dictionary.key-value.json",
         "punctuation.separator.key-value",
         "punctuation.separator.namespace.access.cpp",
-        "punctuation.separator.pointer-access.cpp",
+        "punctuation.separator.pointer-access",
         "punctuation.type.flowtype",
         "source.cpp punctuation.separator.scope-resolution",
         "storage",
