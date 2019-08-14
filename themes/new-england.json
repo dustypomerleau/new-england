@@ -20,6 +20,7 @@
         "constant.type-constructor.elm",
         "entity.name.type.namespace.scope-resolution.cpp",
         "keyword.control.at-rule",
+        "meta.block.c",
         "storage.type.java",
         "variable.other.readwrite"
       ],
