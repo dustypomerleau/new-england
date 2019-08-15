@@ -122,6 +122,7 @@
         "punctuation.separator.key-value",
         "punctuation.separator.namespace.access.cpp",
         "punctuation.separator.pointer-access",
+        "punctuation.separator.pointer-access.c",
         "punctuation.type.flowtype",
         "source.cpp punctuation.separator.scope-resolution",
         "storage",
