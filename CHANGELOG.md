@@ -2,9 +2,11 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
-## **[0.2.1]:** 2019-08-14
+## **[0.2.2]:** 2019-08-16
+highlighting corrections for C
 
-- highlighting corrections for C++
+## **[0.2.1]:** 2019-08-14
+highlighting corrections for C++
 
 ## **[0.2.0]:** 2019-08-14
 
