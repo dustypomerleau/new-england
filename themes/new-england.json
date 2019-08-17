@@ -20,6 +20,7 @@
         "constant.type-constructor.elm",
         "entity.name.type.namespace.scope-resolution.cpp",
         "keyword.control.at-rule",
+        "meta.attribute.rust",
         "meta.block.c",
         "meta.function.parameters.php variable.other.php",
         "parameter.variable.function.elixir",
@@ -45,6 +46,7 @@
         "markup.raw.block",
         "support.class",
         "support.constant.property-value.css",
+        "support.constant.core.rust",
         "support.function.general.tex",
         "support.module.elm",
         "text.html.markdown markup.inline.raw.markdown",
@@ -159,6 +161,7 @@
         "punctuation.quasi.element.begin.js",
         "punctuation.quasi.element.end.js",
         "punctuation.section.embedded",
+        "source.rust storage.modifier",
         "storage.type.format.python",
         "string.other.link.description.markdown",
         "string.other.link.title.markdown",
@@ -173,6 +176,7 @@
         "string.regexp",
         "support.class.latex",
         "support.class.math.latex",
+        "support.function.core.rust",
         "variable.interpolation"
       ],
       "settings": {
@@ -189,6 +193,7 @@
         "keyword.control.layout.tex",
         "keyword.control.ref.latex",
         "meta.function.embedded.latex",
+        "storage.type.core.rust",
         "support.function.magic.python"
       ],
       "settings": {
@@ -210,6 +215,7 @@
         "punctuation.section.regexp.begin.elixir",
         "punctuation.section.regexp.end.elixir",
         "storage.type.elm",
+        "variable.language.rust",
         "variable.other.object.js",
         "variable.other",
         "variable.parameter",
@@ -237,6 +243,7 @@
         "constant.other.general.math.tex",
         "entity.name.function.call.cpp",
         "entity.name.function.member.cpp",
+        "entity.name.function.rust",
         "entity.name.record.field.elm",
         "entity.other.attribute-name",
         "meta.function-call entity.name.function",
