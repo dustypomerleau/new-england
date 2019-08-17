@@ -2,6 +2,9 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
+## **[0.3.0]:** 2019-08-17
+add Rust support
+
 ## **[0.2.2]:** 2019-08-16
 highlighting corrections for C
 
