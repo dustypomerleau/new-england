@@ -22,6 +22,7 @@
         "keyword.control.at-rule",
         "meta.attribute.rust",
         "meta.block.c",
+        "meta.function-call.arguments.python",
         "meta.function.parameters.php variable.other.php",
         "parameter.variable.function.elixir",
         "source.cpp entity.name.scope-resolution",
@@ -154,6 +155,7 @@
     {
       "name": "pink: interpolations, regular expressions",
       "scope": [
+        "constant.character.format.placeholder.other.python",
         "constant.numeric.math.tex",
         "entity.other.attribute-name.id.css",
         "punctuation.definition.template-expression.begin",
@@ -252,6 +254,7 @@
         "meta.object.flowtype storage.type.function",
         "meta.object.flowtype variable.other.readwrite",
         "meta.property-name",
+        "source.python meta.function-call",
         "string.other.link.description.title.markdown",
         "support.type.property-name"
       ],
