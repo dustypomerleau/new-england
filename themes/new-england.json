@@ -27,6 +27,7 @@
         "parameter.variable.function.elixir",
         "source.cpp entity.name.scope-resolution",
         "storage.type.java",
+        "support.function.go",
         "variable.other.readwrite"
       ],
       "settings": {
@@ -62,6 +63,7 @@
       "name": "slate: classes, modules, language variables",
       "scope": [
         "entity.name.class",
+        "entity.name.package.go",
         "entity.name.section",
         "entity.name.type.class",
         "entity.name.type.module",
@@ -128,6 +130,8 @@
         "punctuation.separator.pointer-access.c",
         "punctuation.type.flowtype",
         "source.cpp punctuation.separator.scope-resolution",
+        "punctuation.other.period.go",
+        "punctuation.other.colon.go",
         "storage",
         "support.function.be.latex",
         "support.function.section.latex",
@@ -157,6 +161,7 @@
       "scope": [
         "constant.character.format.placeholder.other.python",
         "constant.numeric.math.tex",
+        "constant.other.placeholder.go",
         "entity.other.attribute-name.id.css",
         "punctuation.definition.template-expression.begin",
         "punctuation.definition.template-expression.end",
@@ -256,6 +261,7 @@
         "meta.property-name",
         "source.python meta.function-call",
         "string.other.link.description.title.markdown",
+        "support.function.builtin.go",
         "support.type.property-name"
       ],
       "settings": {
