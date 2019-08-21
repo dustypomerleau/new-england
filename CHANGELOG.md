@@ -2,6 +2,9 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
+## **[0.4.0]:** 2019-08-21
+add Go support
+
 ## **[0.3.1]:** 2019-08-17
 improve Python highlighting
 
