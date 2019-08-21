@@ -20,6 +20,9 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 ## Rust
 ![rust](./images/rust.png)
 
+## Go
+![go](./images/go.png)
+
 ## Elm
 ![elm](./images/elm.png)
 
@@ -42,6 +45,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - CSS
 - Elixir
 - Elm
+- Go
 - HTML
 - JavaScript
 - LaTeX
@@ -60,7 +64,6 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - Dart
 - Erlang
 - F#
-- Go
 - GraphQL
 - Haskell
 - Java
