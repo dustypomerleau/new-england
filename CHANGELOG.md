@@ -2,6 +2,9 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
+## **[0.5.0]:** 2019-08-22
+add Clojure and Java support
+
 ## **[0.4.0]:** 2019-08-21
 add Go support
 

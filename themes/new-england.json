@@ -27,7 +27,7 @@
         "meta.symbol.clojure",
         "parameter.variable.function.elixir",
         "source.cpp entity.name.scope-resolution",
-        "storage.type.java",
+        "source.java storage.type",
         "support.function.go",
         "variable.other.readwrite"
       ],
@@ -48,8 +48,8 @@
         "markup.raw.block.fenced.markdown",
         "markup.raw.block",
         "support.class",
-        "support.constant.property-value.css",
         "support.constant.core.rust",
+        "support.constant.property-value.css",
         "support.function.general.tex",
         "support.module.elm",
         "text.html.markdown markup.inline.raw.markdown",
@@ -80,6 +80,7 @@
       "name": "navy: default for variables and constants",
       "scope": [
         "constant",
+        "entity.name.function.java",
         "entity.name.record.field.accessor.elm",
         "keyword.other.unit",
         "meta",
@@ -88,6 +89,7 @@
         "variable.other.constant.jsx",
         "variable.other.constant.ts",
         "variable.other.constant.tsx",
+        "variable.other.property.java",
         "variable"
       ],
       "settings": {
@@ -131,10 +133,12 @@
         "punctuation.separator.dictionary.key-value.json",
         "punctuation.separator.key-value",
         "punctuation.separator.namespace.access.cpp",
+        "punctuation.separator.period.java",
         "punctuation.separator.pointer-access.c",
         "punctuation.separator.pointer-access",
         "punctuation.type.flowtype",
         "source.cpp punctuation.separator.scope-resolution",
+        "storage.modifier.import.java punctuation.separator.java",
         "storage",
         "support.function.be.latex",
         "support.function.section.latex",
@@ -204,6 +208,7 @@
         "keyword.control.layout.tex",
         "keyword.control.ref.latex",
         "meta.function.embedded.latex",
+        "meta.method.identifier entity.name.function.java",
         "storage.type.core.rust",
         "support.function.magic.python"
       ],
@@ -221,7 +226,9 @@
         "constant.other.symbol", // atoms
         "entity.name.tag.css",
         "markup.list meta.paragraph.markdown",
+        "meta.function-call.java",
         "meta.function.parameters variable.other.readwrite",
+        "meta.method-call.java",
         "punctuation.section.list.begin.elixir",
         "punctuation.section.list.end.elixir",
         "punctuation.section.regexp.begin.elixir",
@@ -268,7 +275,8 @@
         "source.python meta.function-call",
         "string.other.link.description.title.markdown",
         "support.function.builtin.go",
-        "support.type.property-name"
+        "support.type.property-name",
+        "variable.other.object.java"
       ],
       "settings": {
         "foreground": "#43596f"

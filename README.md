@@ -42,11 +42,13 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 
 - C
 - C++
+- Clojure
 - CSS
 - Elixir
 - Elm
 - Go
 - HTML
+- Java
 - JavaScript
 - LaTeX
 - Markdown
@@ -59,14 +61,12 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 <!-- ## Planned languages:
 
 - C#
-- Clojure
 - Crystal
 - Dart
 - Erlang
 - F#
 - GraphQL
 - Haskell
-- Java
 - Kotlin
 - Lua
 - Objective-C
