@@ -24,6 +24,7 @@
         "meta.block.c",
         "meta.function-call.arguments.python",
         "meta.function.parameters.php variable.other.php",
+        "meta.symbol.clojure",
         "parameter.variable.function.elixir",
         "source.cpp entity.name.scope-resolution",
         "storage.type.java",
@@ -117,6 +118,7 @@
         "markup.quote punctuation.definition.blockquote.markdown",
         "meta.separator",
         "meta.structure.tuple.erlang",
+        "meta.vector.clojure",
         "punctuation.definition.constant.elixir",
         "punctuation.definition.constant.ruby",
         "punctuation.definition.list.begin.markdown",
@@ -194,6 +196,7 @@
     {
       "name": "sea green: functions",
       "scope": [
+        "entity.global.clojure",
         "entity.name.function",
         "entity.name.section.latex",
         "entity.other.attribute-name.pseudo-class.css",
@@ -211,6 +214,7 @@
     {
       "name": "purple: atoms, function params, list items, types",
       "scope": [
+        "constant.keyword.clojure",
         "constant.language.symbol",
         "constant.other.reference.label.latex",
         "constant.other.reference.link.markdown",
@@ -250,6 +254,7 @@
       "scope": [
         "constant.other.general.math.tex",
         "entity.name.function.call.cpp",
+        "entity.name.function.clojure",
         "entity.name.function.member.cpp",
         "entity.name.function.rust",
         "entity.name.record.field.elm",
