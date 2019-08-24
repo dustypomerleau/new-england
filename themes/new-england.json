@@ -15,7 +15,7 @@
       }
     },
     {
-      "name": "yellow: module attributes, Java types, readwrite vars",
+      "name": "yellow: module attributes, types, function call parameters",
       "scope": [
         "constant.type-constructor.elm",
         "keyword.control.at-rule",
@@ -36,7 +36,7 @@
       }
     },
     {
-      "name": "red: numbers, language constants, support modules, tags",
+      "name": "red: numbers, language constants, tags",
       "scope": [
         "constant.language",
         "constant.numeric",
@@ -51,7 +51,6 @@
         "support.constant.core.rust",
         "support.constant.property-value.css",
         "support.function.general.tex",
-        "support.module.elm",
         "text.html.markdown markup.inline.raw.markdown",
         "variable.language.elixir",
         "variable.other.constant", // navy for JS/TS
@@ -91,8 +90,8 @@
         "variable.other.constant.jsx",
         "variable.other.constant.ts",
         "variable.other.constant.tsx",
-        "variable.other.property.java",
         "variable.other.property.cpp",
+        "variable.other.property.java",
         "variable"
       ],
       "settings": {
@@ -203,7 +202,7 @@
       }
     },
     {
-      "name": "sea green: functions",
+      "name": "sea green: function definitions",
       "scope": [
         "entity.global.clojure",
         "entity.name.function",
@@ -230,6 +229,7 @@
         "constant.other.reference.link.markdown",
         "constant.other.symbol", // atoms
         "entity.name.tag.css",
+        "entity.name.type.namespace.scope-resolution.cpp",
         "markup.list meta.paragraph.markdown",
         "meta.function-call.java",
         "meta.function.parameters variable.other.readwrite",
@@ -242,7 +242,6 @@
         "variable.language.rust",
         "variable.other.object.js",
         "variable.other",
-        "entity.name.type.namespace.scope-resolution.cpp",
         "variable.parameter",
         "variable.type.elm"
       ],
@@ -263,7 +262,7 @@
       }
     },
     {
-      "name": "blue: keys, function calls, module attributes",
+      "name": "blue: keys, function calls",
       "scope": [
         "constant.other.general.math.tex",
         "entity.name.function.call.cpp",
@@ -280,6 +279,7 @@
         "source.python meta.function-call",
         "string.other.link.description.title.markdown",
         "support.function.builtin.go",
+        "support.module.elm",
         "support.type.property-name",
         "variable.other.constant.elixir",
         "variable.other.object.access.cpp",
