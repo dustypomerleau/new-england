@@ -140,6 +140,7 @@
         "punctuation.separator.method.elixir",
         "punctuation.separator.namespace.access.cpp",
         "punctuation.separator.period.java",
+        "punctuation.separator.period.python",
         "punctuation.separator.pointer-access.c",
         "punctuation.separator.pointer-access",
         "punctuation.type.flowtype",
