@@ -53,6 +53,7 @@
         "support.function.general.tex",
         "support.module.elm",
         "text.html.markdown markup.inline.raw.markdown",
+        "variable.language.elixir",
         "variable.other.constant", // navy for JS/TS
         "variable.other.object"
       ],
@@ -132,6 +133,7 @@
         "punctuation.separator.dict.python",
         "punctuation.separator.dictionary.key-value.json",
         "punctuation.separator.key-value",
+        "punctuation.separator.method.elixir",
         "punctuation.separator.namespace.access.cpp",
         "punctuation.separator.period.java",
         "punctuation.separator.pointer-access.c",
@@ -276,6 +278,7 @@
         "string.other.link.description.title.markdown",
         "support.function.builtin.go",
         "support.type.property-name",
+        "variable.other.constant.elixir",
         "variable.other.object.java"
       ],
       "settings": {
