@@ -18,11 +18,11 @@
       "name": "yellow: module attributes, Java types, readwrite vars",
       "scope": [
         "constant.type-constructor.elm",
-        "entity.name.type.namespace.scope-resolution.cpp",
         "keyword.control.at-rule",
         "meta.attribute.rust",
         "meta.function-call.arguments.python",
         "meta.function-call.c",
+        "meta.function-call.cpp",
         "meta.function.parameters.php variable.other.php",
         "meta.symbol.clojure",
         "parameter.variable.function.elixir",
@@ -82,6 +82,7 @@
       "scope": [
         "constant",
         "entity.name.function.java",
+        "entity.name.function.member.cpp",
         "entity.name.record.field.accessor.elm",
         "keyword.other.unit",
         "meta",
@@ -91,6 +92,7 @@
         "variable.other.constant.ts",
         "variable.other.constant.tsx",
         "variable.other.property.java",
+        "variable.other.property.cpp",
         "variable"
       ],
       "settings": {
@@ -240,6 +242,7 @@
         "variable.language.rust",
         "variable.other.object.js",
         "variable.other",
+        "entity.name.type.namespace.scope-resolution.cpp",
         "variable.parameter",
         "variable.type.elm"
       ],
@@ -265,7 +268,6 @@
         "constant.other.general.math.tex",
         "entity.name.function.call.cpp",
         "entity.name.function.clojure",
-        "entity.name.function.member.cpp",
         "entity.name.function.rust",
         "entity.name.record.field.elm",
         "entity.other.attribute-name",
@@ -280,6 +282,7 @@
         "support.function.builtin.go",
         "support.type.property-name",
         "variable.other.constant.elixir",
+        "variable.other.object.access.cpp",
         "variable.other.object.java"
       ],
       "settings": {
