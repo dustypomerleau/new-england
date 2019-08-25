@@ -75,6 +75,7 @@
         "entity.name.package.go",
         "entity.name.section",
         "entity.name.type.class",
+        "entity.name.type.interface.ts",
         "entity.name.type.module",
         "entity.other.inherited-class",
         "keyword.control.preamble.latex",
@@ -98,16 +99,14 @@
         "support.constant.ext.php",
         "variable.language.prototype.js",
         "variable.other.block.ruby",
-        "variable.other.constant.js",
-        "variable.other.constant.jsx",
-        "variable.other.constant.ts",
-        "variable.other.constant.tsx",
         "variable.other.constant",
         "variable.other.object.js",
+        "variable.other.object.property.ts",
         "variable.other.php",
         "variable.other.property.cpp",
         "variable.other.property.java",
         "variable.other.property.js",
+        "variable.other.property.ts",
         "variable.other.readwrite.js",
         "variable.other.ruby",
         "variable"
@@ -142,6 +141,7 @@
         "meta.separator",
         "meta.structure.tuple.erlang",
         "meta.vector.clojure",
+        "punctuation.accessor.ts",
         "punctuation.definition.constant.elixir",
         "punctuation.definition.constant.ruby",
         "punctuation.definition.list.begin.markdown",
@@ -313,7 +313,8 @@
         "support.type.property-name",
         "variable.other.constant.elixir",
         "variable.other.object.access.cpp",
-        "variable.other.object.java"
+        "variable.other.object.java",
+        "variable.other.object.ts"
       ],
       "settings": {
         "foreground": "#43596f"
