@@ -46,6 +46,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - CSS
 - Elixir
 - Elm
+- Erlang
 - Go
 - HTML
 - Java
@@ -63,7 +64,6 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - C#
 - Crystal
 - Dart
-- Erlang
 - F#
 - GraphQL
 - Haskell
