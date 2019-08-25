@@ -24,6 +24,7 @@
         "meta.function-call.c",
         "meta.function-call.cpp",
         "meta.function-call.php variable.other.php",
+        "meta.function-call.ruby variable.other.ruby",
         "meta.function-call.with-arguments.js variable.other.constant.js",
         "meta.function-call.with-arguments.js variable.other.readwrite.js",
         "meta.method-call.with-arguments.js variable.other.constant.js",
@@ -60,7 +61,7 @@
         "support.function.general.tex",
         "text.html.markdown markup.inline.raw.markdown",
         "variable.language.elixir",
-        "variable.other.constant", // navy for JS/TS
+        "variable.language.ruby",
         "variable.other.object"
       ],
       "settings": {
@@ -96,16 +97,19 @@
         "storage.modifier.import.java",
         "support.constant.ext.php",
         "variable.language.prototype.js",
+        "variable.other.block.ruby",
         "variable.other.constant.js",
         "variable.other.constant.jsx",
         "variable.other.constant.ts",
         "variable.other.constant.tsx",
+        "variable.other.constant",
         "variable.other.object.js",
         "variable.other.php",
         "variable.other.property.cpp",
         "variable.other.property.java",
         "variable.other.property.js",
         "variable.other.readwrite.js",
+        "variable.other.ruby",
         "variable"
       ],
       "settings": {
@@ -151,11 +155,14 @@
         "punctuation.separator.dot-access",
         "punctuation.separator.key-value",
         "punctuation.separator.method.elixir",
+        "punctuation.separator.method.ruby",
         "punctuation.separator.namespace.access.cpp",
+        "punctuation.separator.namespace.ruby",
         "punctuation.separator.period.java",
         "punctuation.separator.period.python",
         "punctuation.separator.pointer-access.c",
         "punctuation.separator.pointer-access",
+        "punctuation.separator.variable.ruby",
         "punctuation.type.flowtype",
         "source.cpp punctuation.separator.scope-resolution",
         "storage.modifier.import.java punctuation.separator.java",
@@ -212,7 +219,9 @@
         "support.class.latex",
         "support.class.math.latex",
         "support.function.core.rust",
-        "variable.interpolation"
+        "variable.interpolation",
+        "variable.other.readwrite.global.pre-defined.ruby",
+        "variable.other.readwrite.global.ruby"
       ],
       "settings": {
         "foreground": "#93255b"
@@ -259,7 +268,6 @@
         "punctuation.section.regexp.end.elixir",
         "storage.type.elm",
         "variable.language.rust",
-        // "variable.other.object.js",
         "variable.other",
         "variable.parameter",
         "variable.type.elm"
@@ -298,6 +306,7 @@
         "meta.property-name",
         "source.python meta.function-call",
         "string.other.link.description.title.markdown",
+        "support.class.ruby",
         "support.function.builtin.go",
         "support.function.construct.php",
         "support.module.elm",
