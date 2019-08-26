@@ -59,7 +59,8 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - Rust
 - TypeScript
 
-<!-- ## Planned languages:
+<!--
+## Planned languages:
 
 - C#
 - Crystal
@@ -67,15 +68,19 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - F#
 - GraphQL
 - Haskell
+- Julia
 - Kotlin
 - Lua
 - Objective-C
 - OCaml
+- Perl
 - Pony
 - R
 - Reason ML
 - Scala
 - Shell Script
-- Swift -->
+- Swift
+- TLA+
+-->
 
 PRs for language-specific highlighting improvements are welcome. Scopes can be viewed by opening the command palette and selecting `Developer: Inspect TM Scopes`. Theme colors are listed in [`colors.txt`](./colors.txt).
