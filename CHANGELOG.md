@@ -2,6 +2,9 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
+## **[0.7.0]:** 2019-08-31
+- add Haskell support
+
 ## **[0.6.0]:** 2019-08-25
 - add Erlang support
 - broad highlighting improvements for existing languages (specifically to allow more emphasis on method names in dot notation by removing bright red from module and object names)
