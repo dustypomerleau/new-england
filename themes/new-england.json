@@ -33,6 +33,7 @@
         "meta.symbol.clojure",
         "parameter.variable.function.elixir",
         "source.cpp entity.name.scope-resolution",
+        "source.haskell constant",
         "source.java storage.type",
         "support.function.go",
         "support.type.builtin.class.flowtype",
@@ -81,6 +82,7 @@
         "entity.name.type.module",
         "entity.other.inherited-class",
         "keyword.control.preamble.latex",
+        "source.haskell entity.name.namespace",
         "variable.language"
       ],
       "settings": {
@@ -187,6 +189,8 @@
     {
       "name": "brown: punctuation",
       "scope": [
+        "constant.language.unit.haskell",
+        "meta.preprocessor.haskell",
         "meta.tag",
         "punctuation.definition.fenced.markdown",
         "punctuation.definition",
@@ -203,6 +207,7 @@
         "constant.numeric.math.tex",
         "constant.other.placeholder.go",
         "entity.other.attribute-name.id.css",
+        "meta.declaration.exports.haskell entity.name.function.haskell",
         "punctuation.definition.template-expression.begin",
         "punctuation.definition.template-expression.end",
         "punctuation.quasi.element.begin.js",
@@ -272,6 +277,7 @@
         "punctuation.section.regexp.begin.elixir",
         "punctuation.section.regexp.end.elixir",
         "storage.type.elm",
+        "storage.type.haskell",
         "variable.language.rust",
         "variable.other",
         "variable.parameter",
@@ -302,6 +308,7 @@
         "entity.name.function.rust",
         "entity.name.record.field.elm",
         "entity.other.attribute-name",
+        "entity.other.inherited-class.haskell",
         "meta.function-call entity.name.function",
         "meta.function-call.php",
         "meta.method-call entity.name.function",
