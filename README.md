@@ -67,6 +67,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - Crystal
 - Dart
 - F#
+- Gleam
 - GraphQL
 - Julia
 - Kotlin
@@ -79,6 +80,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - Reason ML
 - Scala
 - Shell Script
+- SQL
 - Swift
 - TLA+
 -->
