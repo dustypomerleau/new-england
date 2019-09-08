@@ -39,6 +39,7 @@
         "support.type.builtin.class.flowtype",
         "support.type.builtin.primitive.flowtype",
         "support.type.class.flowtype",
+        "text.html.derivative variable.language",
         "variable.other.readwrite"
       ],
       "settings": {
@@ -65,7 +66,6 @@
         "text.html.markdown markup.inline.raw.markdown",
         "variable.language.elixir",
         "variable.language.ruby",
-        "variable.other.object"
       ],
       "settings": {
         "foreground": "#660000"
@@ -321,12 +321,14 @@
         "support.class.ruby",
         "support.function.builtin.go",
         "support.function.construct.php",
+        "support.function.mutator.js",
         "support.module.elm",
         "support.type.property-name",
         "variable.other.constant.elixir",
         "variable.other.object.access.cpp",
         "variable.other.object.java",
-        "variable.other.object.ts"
+        "variable.other.object.ts",
+        "variable.other.object"
       ],
       "settings": {
         "foreground": "#43596f"
