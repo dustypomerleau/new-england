@@ -41,6 +41,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 ## Supported languages (more to be added soon!):
 
 - C
+- C#
 - C++
 - Clojure
 - CSS
@@ -63,7 +64,6 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 <!--
 ## Planned languages:
 
-- C#
 - Crystal
 - Dart
 - F#
