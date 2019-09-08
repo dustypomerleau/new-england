@@ -2,6 +2,9 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
+## **[0.8.0]:** 2019-09-08
+- add C# and Lua support
+
 ## **[0.7.0]:** 2019-08-31
 - add Haskell support
 

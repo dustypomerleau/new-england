@@ -54,6 +54,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - Java
 - JavaScript
 - LaTeX
+- Lua
 - Markdown
 - PHP
 - Python
@@ -71,7 +72,6 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - GraphQL
 - Julia
 - Kotlin
-- Lua
 - Objective-C
 - OCaml
 - Perl
