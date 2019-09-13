@@ -1,4 +1,4 @@
-https://github.com/crystal-lang/crystal/blob/master/src/crystal/hasher.cr
+# https://github.com/crystal-lang/crystal/blob/master/src/crystal/hasher.cr
 
 # :nodoc:
 struct Crystal::Hasher
