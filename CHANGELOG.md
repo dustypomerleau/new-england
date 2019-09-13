@@ -2,6 +2,9 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
+## **[0.9.0]:** 2019-09-13
+- add Crystal support
+
 ## **[0.8.0]:** 2019-09-08
 - add C# and Lua support
 
