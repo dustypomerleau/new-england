@@ -70,6 +70,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - F#
 - Gleam
 - GraphQL
+- Idris
 - Julia
 - Kotlin
 - Objective-C
