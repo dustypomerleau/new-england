@@ -269,3 +269,71 @@ main(List<String> arguments) {
 
   print("end main");
 }
+
+// added examples to show full syntax (not in original file)
+
+class Spacecraft {
+  String name;
+  DateTime launchDate;
+
+  // Constructor, with syntactic sugar for assignment to members.
+  Spacecraft(this.name, this.launchDate) {
+    // Initialization code goes here.
+  }
+
+  // Named constructor that forwards to the default one.
+  Spacecraft.unlaunched(String name) : this(name, null);
+
+  int get launchYear =>
+      launchDate?.year; // read-only non-final property
+
+  // Method.
+  void describe() {
+    print('Spacecraft: $name');
+    if (launchDate != null) {
+      int years =
+          DateTime.now().difference(launchDate).inDays ~/
+              365;
+      print('Launched: $launchYear ($years years ago)');
+    } else {
+      print('Unlaunched');
+    }
+  }
+}
+
+var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
+voyager.describe();
+
+var voyager3 = Spacecraft.unlaunched('Voyager III');
+voyager3.describe();
+
+class Orbiter extends Spacecraft {
+  num altitude;
+  Orbiter(String name, DateTime launchDate, this.altitude)
+      : super(name, launchDate);
+}
+
+Future<void> createDescriptions(Iterable<String> objects) async {
+  for (var object in objects) {
+    try {
+      var file = File('$object.txt');
+      if (await file.exists()) {
+        var modified = await file.lastModified();
+        print(
+            'File for $object already exists. It was modified on $modified.');
+        continue;
+      }
+      await file.create();
+      await file.writeAsString('Start describing $object in this file.');
+    } on IOException catch (e) {
+      print('Cannot create description for $object: $e');
+    }
+  }
+}
+
+Stream<String> report(Spacecraft craft, Iterable<String> objects) async* {
+  for (var object in objects) {
+    await Future.delayed(oneSecond);
+    yield '${craft.name} flies by $object';
+  }
+}
