@@ -37,6 +37,7 @@
         "source.cpp entity.name.scope-resolution",
         "source.haskell constant",
         "source.java storage.type",
+        "support.class.dart",
         "support.function.go",
         "support.type.builtin.class.flowtype",
         "support.type.builtin.primitive.flowtype",
@@ -162,6 +163,7 @@
         "punctuation.definition.list.begin.markdown",
         "punctuation.definition.quote.begin.markdown",
         "punctuation.definition.raw.markdown",
+        "punctuation.dot.dart",
         "punctuation.other.colon.go",
         "punctuation.other.period.go",
         "punctuation.separator.clause-head-body.erlang",
@@ -267,7 +269,8 @@
         "meta.method.identifier entity.name.function.java",
         "storage.type.core.rust",
         "storage.type.cs",
-        "support.function.magic.python"
+        "support.function.magic.python",
+        "variable.language.dart"
       ],
       "settings": {
         "foreground": "#2c5851"
@@ -325,6 +328,7 @@
         "entity.name.function.call.cpp",
         "entity.name.function.clojure",
         "entity.name.function.cs",
+        "entity.name.function.dart",
         "entity.name.function.lua",
         "entity.name.function.rust",
         "entity.name.record.field.elm",
