@@ -46,6 +46,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - Clojure
 - Crystal
 - CSS
+- Dart
 - Elixir
 - Elm
 - Erlang
@@ -66,7 +67,6 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 <!--
 ## Planned languages:
 
-- Dart
 - F#
 - Gleam
 - GraphQL
