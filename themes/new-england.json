@@ -797,6 +797,8 @@
     "walkThrough.embeddedEditorBackground": "#fdf6e5",
     "welcomePage.buttonBackground": "#e3d8be",
     "welcomePage.buttonHoverBackground": "#cac0a9",
-    "widget.shadow": "#afada5"
+    "widget.shadow": "#afada5",
+    // "window.activeBorder":,
+    // "window.inactiveBorder":
   }
 }
