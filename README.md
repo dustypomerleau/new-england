@@ -79,6 +79,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 - Pony
 - R
 - Reason ML
+- reStructuredText
 - Scala
 - Shell Script
 - SQL
