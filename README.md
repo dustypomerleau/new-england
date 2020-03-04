@@ -7,7 +7,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 
 ## Typescript
 ![typescript](./images/typescript.png)
-     
+
 ## React
 ![react](./images/react.png)
 
@@ -40,6 +40,7 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 
 ## Supported languages (more to be added soon!):
 
+- Asciidoc
 - C
 - C#
 - C++
