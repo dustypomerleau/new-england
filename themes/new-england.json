@@ -19,7 +19,10 @@
       "scope": [
         "constant.type-constructor.elm",
         "entity.name.class.lua",
+        "entity.name.function.asciidoc",
         "keyword.control.at-rule",
+        "markup.italic.quotes.asciidoc",
+        "markup.table.cell.delimiter.asciidoc",
         "meta.attribute.rust",
         "meta.function-call.arguments.python",
         "meta.function-call.c",
@@ -66,6 +69,7 @@
         "support.constant.core.rust",
         "support.constant.property-value.css",
         "support.function.general.tex",
+        "text.asciidoc markup.raw",
         "text.html.markdown markup.inline.raw.markdown",
         "variable.language.elixir",
         "variable.language.ruby"
@@ -86,6 +90,7 @@
         "entity.other.inherited-class",
         "keyword.control.preamble.latex",
         "source.haskell entity.name.namespace",
+        "text.asciidoc markup.heading",
         "variable.language"
       ],
       "settings": {
@@ -144,6 +149,7 @@
     {
       "name": "orange: keywords, control, storage",
       "scope": [
+        "constant.asciidoc",
         "entity.other.attribute-name.class.css",
         "kewyword.operator.union.flowtype", // [sic]
         "keyword.control.newline.tex",
@@ -151,13 +157,18 @@
         "markdown.heading",
         "markup.heading | markup.heading entity.name",
         "markup.heading.markdown punctuation.definition.heading.markdown",
+        "markup.heading.marker.asciidoc",
         "markup.heading.setext",
+        "markup.macro.inline.passthrough.asciidoc",
+        "markup.other.url.asciidoc",
         "markup.quote punctuation.definition.blockquote.markdown",
+        "markup.table.delimiter.asciidoc",
         "meta.separator",
         "meta.structure.tuple.erlang",
         "meta.vector.clojure",
         "punctuation.accessor.cs",
         "punctuation.accessor.ts",
+        "punctuation.definition.asciidoc",
         "punctuation.definition.constant.elixir",
         "punctuation.definition.constant.ruby",
         "punctuation.definition.list.begin.markdown",
@@ -166,6 +177,7 @@
         "punctuation.dot.dart",
         "punctuation.other.colon.go",
         "punctuation.other.period.go",
+        "punctuation.separator.asciidoc",
         "punctuation.separator.clause-head-body.erlang",
         "punctuation.separator.colon.python",
         "punctuation.separator.dict.python",
@@ -191,11 +203,14 @@
         "source.rust storage.modifier",
         "storage.modifier.import.java punctuation.separator.java",
         "storage",
+        "support.asciidoc",
         "support.function.be.latex",
         "support.function.section.latex",
         "support.function.textbf.latex",
         "support.function.textit.latex",
         "support.function.url.latex",
+        "text.asciidoc constant.other.symbol",
+        "text.asciidoc markup.code",
         "variable.other.anonymous.elixir punctuation.definition.variable.elixir"
       ],
       "settings": {
@@ -206,11 +221,13 @@
       "name": "brown: punctuation",
       "scope": [
         "constant.language.unit.haskell",
+        "markup.heading.block-attribute.asciidoc",
         "meta.preprocessor.haskell",
         "meta.tag",
         "punctuation.definition.fenced.markdown",
         "punctuation.definition",
-        "punctuation"
+        "punctuation",
+        "text.asciidoc markup.code markup.heading"
       ],
       "settings": {
         "foreground": "#585550"
@@ -223,6 +240,7 @@
         "constant.numeric.math.tex",
         "constant.other.placeholder.go",
         "entity.other.attribute-name.id.css",
+        "markup.list.bullet.asciidoc",
         "meta.declaration.exports.haskell entity.name.function.haskell",
         "punctuation.definition.template-expression.begin",
         "punctuation.definition.template-expression.end",
@@ -287,7 +305,10 @@
         "entity.name.tag.css",
         "entity.name.type.namespace.scope-resolution.cpp",
         "entity.name.variable.parameter.cs",
+        "markup.heading.asciidoc",
+        "markup.heading.block-attribute.asciidoc",
         "markup.list meta.paragraph.markdown",
+        "markup.meta.attribute-list.asciidoc",
         "meta.function-call.java",
         "meta.function.parameters variable.other.readwrite",
         "meta.function.parameters.js variable.other.readwrite.js",
@@ -300,6 +321,9 @@
         "source.crystal variable.other.readwrite",
         "storage.type.elm",
         "storage.type.haskell",
+        "support.constant.attribute-name.asciidoc",
+        "text.asciidoc markup.macro.block.general string.unquoted",
+        "text.asciidoc markup.other.url string.unquoted",
         "variable.language.rust",
         "variable.other",
         "variable.parameter",
@@ -315,6 +339,7 @@
         "markup.heading",
         "markup.inserted.git_gutter",
         "string",
+        "text.asciidoc markup.link",
         "variable.parameter.url.css"
       ],
       "settings": {
@@ -334,6 +359,9 @@
         "entity.name.record.field.elm",
         "entity.other.attribute-name",
         "entity.other.inherited-class.haskell",
+        "markup.admonition.asciidoc",
+        "markup.heading.list.asciidoc",
+        "markup.heading.list.asciidoc",
         "meta.function-call entity.name.function",
         "meta.function-call.crystal entity.name.function.crystal",
         "meta.function-call.php",
@@ -367,6 +395,9 @@
         "constant.character.escape",
         "constant.character.numeric.regexp",
         "constant.character",
+        "markup.highlight.asciidoc",
+        "markup.mark.asciidoc",
+        "markup.substitution.attribute-reference.asciidoc",
         "string constant.other.placeholder"
       ],
       "settings": {
@@ -386,6 +417,7 @@
     {
       "name": "self, this",
       "scope": [
+        "markup.admonition entity.name.function.asciidoc",
         "variable.language.self.crystal",
         "variable.language.special.self.python",
         "variable.language.this"
