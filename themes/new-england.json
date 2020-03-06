@@ -162,6 +162,7 @@
         "markup.macro.inline.passthrough.asciidoc",
         "markup.other.url.asciidoc",
         "markup.quote punctuation.definition.blockquote.markdown",
+        "markup.substitution.attribute-reference.asciidoc",
         "markup.table.delimiter.asciidoc",
         "meta.separator",
         "meta.structure.tuple.erlang",
@@ -339,6 +340,7 @@
       "scope": [
         "markup.heading",
         "markup.inserted.git_gutter",
+        "markup.mark.asciidoc",
         "string",
         "text.asciidoc markup.link",
         "variable.parameter.url.css"
@@ -397,8 +399,6 @@
         "constant.character.numeric.regexp",
         "constant.character",
         "markup.highlight.asciidoc",
-        "markup.mark.asciidoc",
-        "markup.substitution.attribute-reference.asciidoc",
         "string constant.other.placeholder"
       ],
       "settings": {
