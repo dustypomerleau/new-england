@@ -38,31 +38,31 @@ Designed from the ground up as a light theme, New England has a comfortable and 
 ## Markdown
 ![markdown](./images/markdown.png)
 
-## Supported languages (more to be added soon!):
+## Supported languages and extensions:
 
-- Asciidoc
-- C
-- C#
-- C++
+- AsciiDoc ([AsciiDoc](https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode))
+- C ([C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools))
+- C# ([C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp))
+- C++ ([C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools))
 - Clojure
-- Crystal
+- Crystal ([Crystal Language](https://marketplace.visualstudio.com/items?itemName=faustinoaq.crystal-lang))
 - CSS
-- Dart
-- Elixir
-- Elm
-- Erlang
-- Go
-- Haskell
+- Dart ([Dart Code](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code))
+- Elixir ([vscode-elixir](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) or [ElixirLS](https://marketplace.visualstudio.com/items?itemName=JakeBecker.elixir-ls))
+- Elm ([Elm](https://marketplace.visualstudio.com/items?itemName=Elmtooling.elm-ls-vscode))
+- Erlang ([erlang](https://marketplace.visualstudio.com/items?itemName=pgourlain.erlang))
+- Go ([Go](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go))
+- Haskell ([Haskell Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell))
 - HTML
-- Java
-- JavaScript
-- LaTeX
-- Lua
+- Java ([Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack))
+- JavaScript ([Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel))
+- LaTeX ([LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop))
+- Lua ([Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua))
 - Markdown
 - PHP
-- Python
-- Ruby
-- Rust
+- Python ([Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python))
+- Ruby ([Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) + [VSCode Ruby](https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby))
+- Rust ([Rust (rls)](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust))
 - TypeScript
 
 <!--
