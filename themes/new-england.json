@@ -150,6 +150,7 @@
       "name": "orange: keywords, control, storage",
       "scope": [
         "constant.asciidoc",
+        "constant.character.asciidoc",
         "entity.other.attribute-name.class.css",
         "kewyword.operator.union.flowtype", // [sic]
         "keyword.control.newline.tex",
@@ -212,6 +213,7 @@
         "support.function.url.latex",
         "text.asciidoc constant.other.symbol",
         "text.asciidoc markup.code",
+        "variable.line-break.asciidoc",
         "variable.other.anonymous.elixir punctuation.definition.variable.elixir"
       ],
       "settings": {
