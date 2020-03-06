@@ -2,8 +2,9 @@
 
 Notable changes to the New England theme extension will be documented in this file.
 
-## **[0.10.0]:** 2019-xx-xx
-- add Dart...
+## **[0.10.0]:** 2020-03-06
+- add AsciiDoc and Dart support
+- add links to supported extensions in the README
 
 ## **[0.9.0]:** 2019-09-13
 - add Crystal support
