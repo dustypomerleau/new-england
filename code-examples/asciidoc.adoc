@@ -2,7 +2,7 @@
 // only one H1 for articles (default), multiple ok for books
 = My Document's Title
 Doc Writer <docwriter@gmail.com>
-v0.1, 2020-01-10
+v0.1, 2020-01-01
 :toc:
 // right auto ?left also
 :iconsdir: ./icons
@@ -147,7 +147,7 @@ em--dash
 [lowerroman]
 .. next
 . but seeing this:
-.. perhaps handle globally cuz it's not sticky
+.. perhaps handle globally because it's not sticky
 
 .Indent if you want
 . one
@@ -157,11 +157,11 @@ em--dash
 
 // description lists
 CPU:: the brain of the computer
-Motherboard:: the other thingie
+Motherboard:: the other thing
 
 [horizontal]
 CPU:: the brain of the computer
-Motherboard:: the other thingie
+Motherboard:: the other thing
 
 // indent and spacing means nothing, just preference
 Happy::
@@ -169,7 +169,6 @@ Happy::
 . and another
 
 Sad::
-
   * an item
   * and another
 Ambivalent::
@@ -220,7 +219,6 @@ Here's an example of a document title:
 ----
 
 NOTE: The header is optional.
-
 --
 
 // open block used to attach a source file
@@ -239,7 +237,7 @@ print("one")
 . {blank}
 +
 ----
-print("one")
+print("two")
 ----
 
 // attach a paragraph to the parent rather than the child with 1 blank line and a `+` (2 preceding blank lines attached to the grandparent, and so on)
@@ -283,7 +281,7 @@ Jim's typographic apostrophe.
 // link macro:
 link:url[optional link text, optional target attribute, optional role attribute]
 // caret is short for a target of _blank
-link:https://eyenotes.org[this page^, role=green]
+link:https://asciidoctor.org[this page^, role=green]
 
 Attributes:
 
@@ -296,8 +294,8 @@ toggle off an attribute:
 :!sectnums:
 
 :toc:
-:my-url: https://eyenotes.org
-:another-url: https://eyenotes.org[this location]
+:my-url: https://asciidoctor.org
+:another-url: https://asciidoctor.org[this location]
 
 Go to {my-url}
 Go to {my-url}[this url].
@@ -316,7 +314,7 @@ ____
 content
 ____
 
-// you can also assign roles to quoted text like:
+// you can also assign roles to quoted text like this:
 [.underline]*both underlined and bold*
 [.underline]`both underlined and monospace`
 
