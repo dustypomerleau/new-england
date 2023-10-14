@@ -1,41 +1,62 @@
 # New England
+
 ## A truly comfortable light theme for Visual Studio Code
+
+---
+
+### A note on maintenance:
+
+I have moved on to using [Tol.nvim](https://github.com/dustypomerleau/tol.nvim) as my regular theme.
+I will gladly merge PRs to keep this repo working nicely for everyone, but I won't be actively maintaining it.
+
+---
 
 Designed from the ground up as a light theme, New England has a comfortable and legible contrast that will handle long hours at the screen, variable display brightness, and late-night redshifting by f.lux or Night Shift. Thanks for coming to visit. We hope you like it here, and we hope you stay.
 
 ## Screenshots:
 
 ## Typescript
+
 ![typescript](./images/typescript.png)
 
 ## React
+
 ![react](./images/react.png)
 
 ## Elixir
+
 ![elixir](./images/elixir.png)
 
 ## Ruby
+
 ![ruby](./images/ruby.png)
 
 ## Rust
+
 ![rust](./images/rust.png)
 
 ## Go
+
 ![go](./images/go.png)
 
 ## Elm
+
 ![elm](./images/elm.png)
 
 ## HTML
+
 ![html](./images/html.png)
 
 ## CSS
+
 ![css](./images/css.png)
 
 ## Python
+
 ![python](./images/python.png)
 
 ## Markdown
+
 ![markdown](./images/markdown.png)
 
 ## Supported languages and extensions:
